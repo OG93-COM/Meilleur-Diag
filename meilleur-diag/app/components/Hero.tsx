@@ -65,7 +65,7 @@ export default function Hero() {
           {/* CTA */}
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
             <Link
-              href="/devis"
+              href="/devis-diagnostic-immobilier"
               className="px-6 py-3 bg-primary text-black font-semibold rounded-xl hover:bg-primarylight transition-all flex items-center justify-center gap-2"
             >
               Demander un devis gratuit

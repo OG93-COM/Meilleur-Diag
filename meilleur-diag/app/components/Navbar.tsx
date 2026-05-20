@@ -23,7 +23,7 @@ const navLinks = [
     ],
   },
   { label: 'Meilleur Diag ?', href: '/a-propos' },
-  { label: 'Devis Gratuit', href: '/devis' },
+  { label: 'Devis Gratuit', href: '/devis-diagnostic-immobilier' },
   { label: 'Contactez-Nous', href: '/contact' },
 ]
 
@@ -55,21 +55,14 @@ export default function Navbar() {
               {navLinks.map((link) =>
                 link.dropdown ? (
                   <div key={link.label} className="relative group">
-                    <button
-                      className={`flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 ${
-                        scrolled
-                          ? 'text-white hover:text-primary hover:bg-gray-50'
-                          : 'text-white/80 hover:text-white hover:bg-white/10'
-                      }`}
-                    >
+                    <Link href={link.href} className={`flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 ${
+                        scrolled ? 'text-white hover:text-primary hover:bg-gray-50' : 'text-white/80 hover:text-white hover:bg-white/10' }`} >
                       {link.label}
                       <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-200" />
-                    </button>
+                    </Link>
                     <div className="absolute top-full left-0 mt-2 w-70 bg-white rounded-xl shadow-2xl border border-gray-100 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-1 group-hover:translate-y-0">
                       {link.dropdown.map((item) => (
-                        <Link
-                          key={item.href}
-                          href={item.href}
+                        <Link key={item.href} href={item.href}
                           className="flex items-center gap-2 px-4 py-2.5 text-sm text-mygray hover:text-black hover:bg-primary/5 transition-colors"
                         >
                           <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
@@ -131,13 +124,13 @@ export default function Navbar() {
             <nav className="space-y-1">
               {navLinks.map((link) =>
                 link.dropdown ? (
-                  <div key={link.label}>
-                    <button onClick={() => setServicesOpen(!servicesOpen)} className="flex items-center justify-between w-full px-4 py-3 text-sm font-medium text-black hover:bg-gray-50 hover:text-primary rounded-lg">
+                  <div key={link.label} >
+                    <Link href={link.href} className="flex items-center justify-between w-full px-4 py-3 text-sm font-medium text-black hover:bg-gray-50 hover:text-primary rounded-lg">
                       {link.label}
-                      <ChevronDown size={14} className={`transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
-                    </button>
+                      <ChevronDown onClick={() => setServicesOpen(!servicesOpen)} size={14} className={`transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
+                    </Link>
                     {servicesOpen && (
-                      <div className="ml-4 mt-1 space-y-1 border-l-2 border-primary/20 pl-4">
+                      <div onClick={() => setMobileOpen(false)} className="ml-4 mt-1 space-y-1 border-l-2 border-primary/20 pl-4">
                         {link.dropdown.map((item) => (
                           <Link key={item.href} href={item.href} className="block py-2 text-sm text-mygray hover:text-primary"
                             onClick={() => (false)} >
