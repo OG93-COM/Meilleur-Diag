@@ -78,8 +78,8 @@ export default function DiagnosticDPEPage() {
 
         <section className="py-16 bg-white">
           <div className="container-custom">
-            <div className="w-full rounded-2xl overflow-hidden mb-10 bg-[#f8f8f8] aspect-16/7">
-              <Image src="/images/services/diagnostic-DPE.jpg" alt="Diagnostic DPE Paris" width={1200} height={525} className="w-full h-full object-cover" />
+            <div className="w-full rounded-lg shadow-lg overflow-hidden mb-10 bg-[#f8f8f8] aspect-auto">
+              <Image src="/images/services/diagnostic-dpe-paris.jpg" alt="Diagnostic DPE Paris" width={1216} height={395} className="object-cover" draggable={false}/>
             </div>
 
             <div className="grid lg:grid-cols-[1fr_300px] gap-12 items-start">
@@ -88,9 +88,6 @@ export default function DiagnosticDPEPage() {
                 {/* Quoi */}
                 <div id="quoi" className="mb-12">
                   <h2 className="text-2xl font-bold text-black mb-4" style={{ fontFamily: 'Syne, system-ui' }}>Qu'est-ce que le DPE ?</h2>
-                  <div className="rounded-2xl overflow-hidden mb-6 bg-[#f8f8f8]">
-                    <Image src="/images/services/classe-energie-diagnostic-immobilier-paris.jpeg" alt="Étiquettes énergie DPE" width={800} height={300} className="w-full object-cover max-h-72" />
-                  </div>
                   <p className="text-mygray text-base leading-relaxed mb-4">
                     Le Diagnostic de Performance Énergétique (DPE) est une évaluation standardisée de la consommation d'énergie d'un logement et de ses émissions de gaz à effet de serre. Introduit en France dès 2006, il est devenu un critère central dans les transactions immobilières — tant pour la vente que pour la location.
                   </p>
@@ -118,6 +115,10 @@ export default function DiagnosticDPEPage() {
                 {/* Pourquoi */}
                 <div id="pourquoi" className="mb-12">
                   <h2 className="text-2xl font-bold text-black mb-4" style={{ fontFamily: 'Syne, system-ui' }}>Pourquoi faire un DPE ?</h2>
+                  <div className="rounded-lg shadow-sm overflow-hidden mb-6 bg-[#f8f8f8]">
+                    <Image src="/images/services/diagnostic-immobilier-dpe.jpg" alt="Étiquettes énergie DPE"
+                        width={868} height={288} className="w-full object-cover max-h-72" draggable={false}/>
+                  </div>
                   <p className="text-mygray text-base leading-relaxed mb-4">
                     Le DPE est <strong className="text-black">obligatoire pour toute mise en vente ou en location</strong> d'un logement, et doit figurer sur toutes les annonces immobilières depuis 2011. Mais au-delà de l'obligation légale, c'est un outil utile pour le propriétaire comme pour le futur occupant.
                   </p>

@@ -115,14 +115,9 @@ export default function DiagnosticRisquesNaturelsPage() {
 
         <section className="py-16 bg-white">
           <div className="container-custom">
-            <div className="w-full rounded-2xl overflow-hidden mb-10 bg-[#f8f8f8] aspect-16/7">
-              <Image
-                src="/images/services/diagnostic-ERP.jpg"
-                alt="Diagnostic ERP Paris — État des Risques et Pollutions"
-                width={1200}
-                height={525}
-                className="w-full h-full object-cover"
-              />
+            <div className="w-full rounded-lg shadow-lg overflow-hidden mb-10 bg-[#f8f8f8] aspect-16/7">
+              <Image src="/images/services/diagnostic-ERP.jpg" alt="Diagnostic ERP Paris — État des Risques et Pollutions"
+                width={868} height={288} className="w-full object-cover max-h-72" draggable={false}/>
             </div>
 
             <div className="grid lg:grid-cols-[1fr_300px] gap-12 items-start">
@@ -133,14 +128,9 @@ export default function DiagnosticRisquesNaturelsPage() {
                   <h2 className="text-2xl font-bold text-black mb-4" style={{ fontFamily: 'Syne, system-ui' }}>
                     Qu'est-ce que le diagnostic ERP ?
                   </h2>
-                  <div className="rounded-2xl overflow-hidden mb-6 bg-[#f8f8f8]">
-                    <Image
-                      src="/images/services/diagnostic-immobilier-risques-naturels-ERP.jpg"
-                      alt="Risques naturels et technologiques évalués dans l'ERP"
-                      width={800}
-                      height={300}
-                      className="w-full object-cover max-h-72"
-                    />
+                  <div className="rounded-lg shadow-sm overflow-hidden mb-6 bg-[#f8f8f8]">
+                    <Image src="/images/services/diagnostic-immobilier-risques-naturels-ERP.jpg" alt="Risques naturels et technologiques évalués dans l'ERP"
+                      width={868} height={288} className="w-full object-cover max-h-72" draggable={false}/>
                   </div>
                   <p className="text-mygray text-base leading-relaxed mb-4">
                     L'<strong className="text-black">État des Risques et Pollutions (ERP)</strong> est un document qui recense l'ensemble des risques naturels, technologiques, miniers et de pollution auxquels un bien immobilier peut être exposé en fonction de sa localisation. Il remplace depuis 2018 l'ancien ESRIS (État des Servitudes Risques et d'Information sur les Sols).

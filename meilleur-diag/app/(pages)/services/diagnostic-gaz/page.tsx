@@ -78,7 +78,7 @@ export default function DiagnosticGazPage() {
         <section className="py-16 bg-white">
           <div className="container-custom">
             <div className="w-full rounded-2xl overflow-hidden mb-10 bg-[#f8f8f8] aspect-16/7">
-              <Image src="/images/services/diagnostic-GAZ.jpg" alt="Diagnostic gaz Paris" width={1200} height={525} className="w-full h-full object-cover" />
+              <Image src="/images/services/diagnostic-GAZ.jpg" alt="Diagnostic gaz Paris" width={1216} height={395} className="object-cover" draggable={false}/>
             </div>
 
             <div className="grid lg:grid-cols-[1fr_300px] gap-12 items-start">
@@ -87,8 +87,8 @@ export default function DiagnosticGazPage() {
                 {/* Quoi */}
                 <div id="quoi" className="mb-12">
                   <h2 className="text-2xl font-bold text-black mb-4" style={{ fontFamily: 'Syne, system-ui' }}>Qu'est-ce que le diagnostic gaz ?</h2>
-                  <div className="rounded-2xl overflow-hidden mb-6 bg-[#f8f8f8]">
-                    <Image src="/images/services/diagnostic-immobilier-GAZ.jpg" alt="Inspection installation gaz" width={800} height={300} className="w-full object-cover max-h-72" />
+                  <div className="rounded-lg shadow-sm overflow-hidden mb-6 bg-[#f8f8f8]">
+                    <Image src="/images/services/diagnostic-immobilier-GAZ.jpg" alt="Inspection installation gaz" width={868} height={288} className="w-full object-cover max-h-72" draggable={false}/>
                   </div>
                   <p className="text-mygray text-base leading-relaxed mb-4">
                     Le diagnostic gaz — officiellement <strong className="text-black">état de l'installation intérieure de gaz</strong> — est un contrôle technique qui évalue la sécurité de l'ensemble de l'installation gaz d'un logement. Il couvre les équipements alimentés en gaz naturel ou en propane : chaudières, chauffe-bains, cuisinières, tuyauteries et raccordements.

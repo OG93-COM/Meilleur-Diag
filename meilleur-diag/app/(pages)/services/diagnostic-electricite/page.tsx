@@ -77,14 +77,9 @@ export default function DiagnosticElectricitePage() {
 
         <section className="py-16 bg-white">
           <div className="container-custom">
-            <div className="w-full rounded-2xl overflow-hidden mb-10 bg-[#f8f8f8] aspect-16/7">
-              <Image
-                src="/images/services/diagnostic-electrique.jpg"
-                alt="Diagnostic électrique Paris"
-                width={1200}
-                height={525}
-                className="w-full h-full object-cover"
-              />
+            <div className="w-full rounded-lg shadow-lg overflow-hidden mb-10 bg-[#f8f8f8] aspect-16/7">
+              <Image src="/images/services/diagnostic-electrique.jpg" alt="Diagnostic électrique Paris"
+                width={1216} height={395} className="object-cover" draggable={false}/>
             </div>
 
             <div className="grid lg:grid-cols-[1fr_300px] gap-12 items-start">
@@ -95,14 +90,9 @@ export default function DiagnosticElectricitePage() {
                   <h2 className="text-2xl font-bold text-black mb-4" style={{ fontFamily: 'Syne, system-ui' }}>
                     Qu'est-ce que le diagnostic électrique ?
                   </h2>
-                  <div className="rounded-2xl overflow-hidden mb-6 bg-[#f8f8f8]">
-                    <Image
-                      src="/images/services/diagnostic-immobilier-electrique.jpg"
-                      alt="Inspection installation électrique"
-                      width={800}
-                      height={300}
-                      className="w-full object-cover max-h-72"
-                    />
+                  <div className="rounded-lg shadow-sm overflow-hidden mb-6 bg-[#f8f8f8]">
+                    <Image src="/images/services/diagnostic-immobilier-electrique.jpg" alt="Inspection installation électrique"
+                      width={868} height={288} className="w-full object-cover max-h-72" draggable={false}/>
                   </div>
                   <p className="text-mygray text-base leading-relaxed mb-4">
                     Le diagnostic électrique — officiellement appelé <strong className="text-black">état de l'installation intérieure d'électricité</strong> — est une évaluation technique qui permet d'identifier les défauts et anomalies susceptibles de compromettre la sécurité des occupants. Il couvre l'ensemble de l'installation électrique depuis le compteur jusqu'aux prises et interrupteurs.

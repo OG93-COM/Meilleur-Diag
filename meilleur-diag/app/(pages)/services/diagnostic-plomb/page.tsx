@@ -77,14 +77,9 @@ export default function DiagnosticPlombPage() {
 
         <section className="py-16 bg-white">
           <div className="container-custom">
-            <div className="w-full rounded-2xl overflow-hidden mb-10 bg-[#f8f8f8] aspect-16/7">
-              <Image
-                src="/images/services/diagnostic-plomb.jpg"
-                alt="Diagnostic plomb Paris — CREP"
-                width={1200}
-                height={525}
-                className="w-full h-full object-cover"
-              />
+            <div className="w-full rounded-2xl overflow-hidden mb-10 bg-[#f8f8f8]">
+              <Image src="/images/services/diagnostic-plomb-paris.jpg"
+                alt="Diagnostic plomb Paris — CREP" width={1216} height={395} className="object-cover"/>
             </div>
 
             <div className="grid lg:grid-cols-[1fr_300px] gap-12 items-start">
@@ -95,15 +90,6 @@ export default function DiagnosticPlombPage() {
                   <h2 className="text-2xl font-bold text-black mb-4" style={{ fontFamily: 'Syne, system-ui' }}>
                     Pourquoi faire un diagnostic plomb ?
                   </h2>
-                  <div className="rounded-2xl overflow-hidden mb-6 bg-[#f8f8f8]">
-                    <Image
-                      src="/images/services/diagnostic-immobilier-plomb.jpg"
-                      alt="Détection plomb dans les peintures"
-                      width={800}
-                      height={300}
-                      className="w-full object-cover max-h-72"
-                    />
-                  </div>
                   <p className="text-mygray text-base leading-relaxed mb-4">
                     Le plomb a été massivement utilisé dans les peintures de bâtiments jusqu'à son interdiction en 1948. Dans les logements anciens, ces peintures se dégradent avec le temps et libèrent des <strong className="text-black">poussières et écailles de plomb</strong> qui peuvent être ingérées ou inhalées par les occupants — en particulier les jeunes enfants qui portent les mains à la bouche.
                   </p>
@@ -117,6 +103,10 @@ export default function DiagnosticPlombPage() {
                   <h2 className="text-2xl font-bold text-black mb-4" style={{ fontFamily: 'Syne, system-ui' }}>
                     Le saturnisme : un danger invisible
                   </h2>
+                  <div className="rounded-lg shadow-sm overflow-hidden mb-6 bg-[#f8f8f8]">
+                    <Image src="/images/services/diagnostic-immobilier-plomb.jpg" alt="Détection plomb dans les peintures"
+                      width={868} height={288} className="w-full object-cover max-h-72"/>
+                  </div>
                   <p className="text-mygray text-base leading-relaxed mb-4">
                     Le saturnisme est une intoxication au plomb qui se manifeste de façon progressive et souvent silencieuse. Les enfants de moins de 6 ans sont les premières victimes, car leur organisme en développement absorbe le plomb jusqu'à cinq fois plus efficacement que celui d'un adulte.
                   </p>

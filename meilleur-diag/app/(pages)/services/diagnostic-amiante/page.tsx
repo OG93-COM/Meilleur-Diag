@@ -81,13 +81,8 @@ export default function DiagnosticAmiantePage() {
         <section className="py-16 bg-white">
           <div className="container-custom">
             <div className="w-full h-full rounded-2xl overflow-hidden mb-10 bg-light">
-              <Image
-                src="/images/services/diagnostic-amiante.jpg"
-                alt="Diagnostic immobilier amiante Paris"
-                width={580}
-                height={200}
-                className="w-full h-full object-cover"
-              />
+              <Image src="/images/services/diagnostic-amiante.jpg" alt="Diagnostic immobilier amiante Paris"
+                width={1216} height={395} className="object-cover" draggable={false} />
             </div>
             <div className="grid lg:grid-cols-[1fr_300px] gap-12 items-start">
 
@@ -119,14 +114,9 @@ export default function DiagnosticAmiantePage() {
                     Les matériaux contenant de l'amiante sont classés selon une <strong className="text-black">grille de notation de 1 à 3</strong> : une note de 1 indique un bon état de conservation ne nécessitant qu'une surveillance périodique, tandis qu'une note de 3 impose des travaux de retrait ou de confinement dans un délai de trois ans maximum.
                   </p>
 
-                  <div className="rounded-2xl overflow-hidden mb-6 bg-[#f8f8f8]">
-                    <Image
-                      src="/images/services/diagnostic-immobilier-amiante.jpg"
-                      alt="Les matériaux amiantés et leur évaluation"
-                      width={400}
-                      height={200}
-                      className="w-full object-cover max-h-72"
-                    />
+                  <div className="rounded-lg shadow-sm overflow-hidden mb-6 bg-[#f8f8f8]">
+                    <Image src="/images/services/diagnostic-immobilier-amiante.jpg" alt="Les matériaux amiantés et leur évaluation"
+                      width={868} height={288} className="w-full object-cover max-h-72" draggable={false}/>
                   </div>
 
                   <div className="bg-amber-50 border border-amber-200 rounded-2xl p-5 flex gap-4">

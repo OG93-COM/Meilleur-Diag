@@ -76,14 +76,8 @@ export default function DiagnosticAssainissementPage() {
 
         <section className="py-16 bg-white">
           <div className="container-custom">
-            <div className="w-full rounded-2xl overflow-hidden mb-10 bg-[#f8f8f8] aspect-16/7">
-              <Image
-                src="/images/services/diagnostic-assainissement.jpg"
-                alt="Diagnostic assainissement Paris"
-                width={1200}
-                height={525}
-                className="w-full h-full object-cover"
-              />
+            <div className="w-full rounded-lg overflow-hidden mb-10 bg-[#f8f8f8] aspect-auto">
+              <Image src="/images/services/diagnostic-assainissement-paris.jpg" alt="Diagnostic assainissement Paris" width={1216} height={395} className="object-cover" draggable={false}/>
             </div>
 
             <div className="grid lg:grid-cols-[1fr_300px] gap-12 items-start">
@@ -95,13 +89,8 @@ export default function DiagnosticAssainissementPage() {
                     Pourquoi réaliser un diagnostic assainissement ?
                   </h2>
                   <div className="rounded-2xl overflow-hidden mb-6 bg-[#f8f8f8]">
-                    <Image
-                      src="/images/services/diagnostic-immobilier-assainissement.jpg"
-                      alt="Système d'assainissement inspecté"
-                      width={800}
-                      height={300}
-                      className="w-full object-cover max-h-72"
-                    />
+                    <Image  src="/images/services/diagnostic-immobilier-assainissement.jpg" alt="Système d'assainissement inspecté"
+                      width={868} height={288} className="w-full object-cover max-h-72" draggable={false}/>
                   </div>
                   <p className="text-mygray text-base leading-relaxed mb-4">
                     Le diagnostic assainissement évalue l'état et la conformité du système d'évacuation des eaux usées de votre bien — depuis l'arrivée d'eau jusqu'au raccordement au réseau communal ou à l'installation individuelle (fosse septique, micro-station). Lors d'une vente, la loi impose d'informer l'acheteur sur le type de système en place et son état de fonctionnement.

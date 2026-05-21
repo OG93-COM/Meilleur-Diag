@@ -77,13 +77,8 @@ export default function DiagnosticTermitesPage() {
         {/* Main content */}
         <section className="py-16 bg-white">
           <div className="container-custom ">
-            <div className="w-full h-full rounded-2xl overflow-hidden mb-10 bg-light">
-                  <Image
-                    src="/images/services/diagnostic-termites.jpg"
-                    alt="Diagnostic immobilier termites Paris"
-                    width={580} height={200}
-                    className="w-full h-full object-cover"
-                  />
+            <div className="w-full h-full rounded-lg shadow-lg overflow-hidden mb-10 bg-light">
+                  <Image src="/images/services/diagnostic-termites.jpg" alt="Diagnostic immobilier termites Paris" width={1216} height={395} className="object-cover" draggable={false}/>
             </div>
             <div className="grid lg:grid-cols-[1fr_300px] gap-12 items-start ">
 
@@ -118,9 +113,9 @@ export default function DiagnosticTermitesPage() {
                   <p className="text-mygray text-base leading-relaxed mb-6">
                     Par ailleurs, les galeries creusées dans le bois longent souvent les canalisations électriques, augmentant considérablement le <strong className="text-black">risque d'incendie par court-circuit</strong>. Faire réaliser un diagnostic termites, c'est donc protéger à la fois l'intégrité de votre bien et la sécurité de ses occupants.
                   </p>
-                  <div className="rounded-2xl overflow-hidden mb-6 bg-[#f8f8f8]">
-                    <Image src="/images/services/diagnostic-immobilier-termites.jpg" alt="Les termites et leur impact sur les bâtiments"
-                      width={400} height={200} className="w-full object-cover max-h-72"/>
+                  <div className="rounded-lg shadow-sm overflow-hidden mb-6 bg-[#f8f8f8]">
+                    <Image src="/images/services/diagnostic-termites-paris.jpg" alt="Les termites et leur impact sur les bâtiments"
+                      width={868} height={288} className="w-full object-cover max-h-72" draggable={false}/>
                   </div>
                   <div className="bg-amber-50 border border-amber-200 rounded-2xl p-5 flex gap-4">
                     <AlertTriangle size={20} className="text-amber-500 shrink-0 mt-0.5" />

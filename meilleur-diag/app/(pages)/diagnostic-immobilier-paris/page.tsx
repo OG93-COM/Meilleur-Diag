@@ -61,14 +61,14 @@ const chiffres = [
 ]
 
 const zones = [
-  { name: 'Seine-Saint-Denis (93)', href: '/diagnostic-immo/diagnostic-immobilier-Seine-Saint-Denis' },
-  { name: 'Aulnay-sous-Bois', href: '/diagnostic-immo/diagnostic-immobilier-aulnay-sous-bois' },
-  { name: 'Hauts-de-Seine (92)', href: null },
-  { name: 'Val-de-Marne (94)', href: null },
-  { name: 'Yvelines (78)', href: null },
-  { name: 'Essonne (91)', href: null },
-  { name: 'Val-d\'Oise (95)', href: null },
-  { name: 'Seine-et-Marne (77)', href: null },
+  { name: 'Seine-Saint-Denis (93)', href: '/diagnostic-immobilier/diagnostic-immobilier-seine-saint-denis' },
+  { name: 'Aulnay-sous-Bois', href: '/diagnostic-immobilier/diagnostic-immobilier-aulnay-sous-bois' },
+  { name: 'Hauts-de-Seine (92)', href: '/diagnostic-immobilier/diagnostic-immobilier-hauts-de-seine' },
+  { name: 'Val-de-Marne (94)', href: '/diagnostic-immobilier/diagnostic-immobilier-val-de-marne' },
+  { name: 'Yvelines (78)', href: '/diagnostic-immobilier/diagnostic-immobilier-yvelines' },
+  { name: 'Essonne (91)', href: '/diagnostic-immobilier/diagnostic-immobilier-essonne' },
+  { name: 'Val-d\'Oise (95)', href: '/diagnostic-immobilier/diagnostic-immobilier-val-doise' },
+  { name: 'Seine-et-Marne (77)', href: '/diagnostic-immobilier/diagnostic-immobilier-seine-et-marne' },
 ]
 
 export default function AProposPage() {
@@ -155,11 +155,12 @@ export default function AProposPage() {
                 <div className="space-y-4">
                   <div className="rounded-2xl overflow-hidden aspect-4/5 bg-[#f8f8f8]">
                     <Image
-                      src="/images/services/diagnostic-immobilier-plomb.jpg"
+                      src="/images/meilleur-diagnostic-immobilier.jpg"
                       alt="Diagnostiqueur Meilleur Diag en intervention à Paris"
                       width={400}
                       height={500}
                       className="w-full h-full object-cover"
+                      draggable={false}
                     />
                   </div>
                   <div className="rounded-2xl bg-black p-5 text-center">
@@ -174,11 +175,12 @@ export default function AProposPage() {
                   </div>
                   <div className="rounded-2xl overflow-hidden aspect-4/5 bg-[#f8f8f8]">
                     <Image
-                      src="/images/services/diagnostic-immobilier-electrique.jpg"
+                      src="/images/meilleur-diagnostic-immobilier-paris.jpg"
                       alt="Équipe Meilleur Diag — diagnostiqueurs certifiés"
                       width={400}
                       height={500}
                       className="w-full h-full object-cover"
+                      draggable={false}
                     />
                   </div>
                 </div>
