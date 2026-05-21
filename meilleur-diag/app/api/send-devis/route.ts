@@ -6,10 +6,7 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 export async function POST(req: NextRequest) {
   const body = await req.json()
 
-  const {
-    pack, typeBien, anneeConstruction, surface, gaz,
-    nom, email, tel, adresse, ville, codePostal,
-  } = body
+  const { pack, typeBien, anneeConstruction, surface, gaz, nom, email, tel, adresse, ville, codePostal} = body
 
   try {
     await resend.emails.send({

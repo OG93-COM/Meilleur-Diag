@@ -56,7 +56,7 @@ export default function Stats() {
   }, [])
 
   return (
-    <section ref={ref} className="relative overflow-hidden pb-6 bg-black border-b" style={{ borderColor: '#1f1f1f' }} >
+    <section ref={ref} className="hidden lg:flex relative overflow-hidden pb-6 bg-black border-b" style={{ borderColor: '#1f1f1f' }} >
 
       <div className="container-custom relative z-10">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-0 lg:divide-x divide-white/10">

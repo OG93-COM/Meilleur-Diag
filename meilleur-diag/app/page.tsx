@@ -5,16 +5,16 @@ import Services from "./components/sections/Services";
 import WhyUs from "./components/sections/WhyUs";
 import HowItWorks from "./components/sections/HowItWorks";
 import CTA from "./components/sections/CTA";
-import DevisForm from "./components/sections/DevisForm";
 import CTAYellow from "./components/CTAYellow";
 import Highlight from "./components/sections/Highlight";
+import DevisFormMulti from "./components/sections/DevisFormMulti";
 
 export default function Home() {
   return (
     <main>
         <Hero />
         <Stats />
-        <DevisForm/>
+        <DevisFormMulti/>
         <Highlight/>
         <Services />
         <WhyUs />

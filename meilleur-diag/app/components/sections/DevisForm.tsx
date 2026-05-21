@@ -142,12 +142,12 @@ export default function DevisForm() {
                     >
                       {done ? <Check size={16} /> : <Icon size={16} />}
                     </div>
-                    <span className={`text-[11px] font-semibold uppercase tracking-wide whitespace-nowrap ${active ? 'text-black' : 'text-[#aaa]'}`}>
+                    <span className={`text-[9px] sm:text-[11px] font-semibold uppercase tracking-wide whitespace-nowrap ${active ? 'text-black' : 'text-[#aaa]'}`}>
                       {s.label}
                     </span>
                   </div>
                   {i < steps.length - 1 && (
-                    <div className={`w-16 sm:w-24 h-px mx-3 mb-5 transition-all duration-500 ${step > i ? 'bg-emerald-400' : 'bg-[#e8e8e8]'}`} />
+                    <div className={`w-2 sm:w-24 h-px mx-3 mb-5 transition-all duration-500 ${step > i ? 'bg-emerald-400' : 'bg-[#e8e8e8]'}`} />
                   )}
                 </div>
               )

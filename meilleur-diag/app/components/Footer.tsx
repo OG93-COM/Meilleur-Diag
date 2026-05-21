@@ -21,7 +21,7 @@ const services = [
 const quickLinks = [
   { label: 'Accueil', href: '/' },
   { label: 'Nos Services', href: '/services' },
-  { label: 'Pourquoi Meilleur Diag ?', href: '/a-propos' },
+  { label: 'Pourquoi Meilleur Diag ?', href: '/diagnostic-immobilier-paris' },
   { label: 'Demande de Devis', href: '/devis-diagnostic-immobilier' },
   { label: 'Contactez-Nous', href: '/contact' },
   { label: 'Diagnostic Location', href: '/diagnostic-immobilier-location' },

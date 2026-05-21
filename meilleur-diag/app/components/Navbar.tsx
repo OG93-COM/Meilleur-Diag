@@ -22,7 +22,7 @@ const navLinks = [
       { label: 'Risques Naturels (ERP)', href: '/services/diagnostic-risques-naturels' },
     ],
   },
-  { label: 'Meilleur Diag ?', href: '/a-propos' },
+  { label: 'Meilleur Diag ?', href: '/diagnostic-immobilier-paris' },
   { label: 'Devis Gratuit', href: '/devis-diagnostic-immobilier' },
   { label: 'Contactez-Nous', href: '/contact' },
 ]

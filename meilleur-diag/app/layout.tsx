@@ -21,13 +21,13 @@ export const metadata: Metadata = {
     title: 'Diagnostic Immobilier Paris | Meilleur Diag',
     description: 'Diagnostiqueur Immobilier certifié à Paris et Île-de-France. DPE, Amiante, Plomb, Gaz, Électricité. Devis gratuit.',
     siteName: 'Meilleur Diag',
-    images: [{ url: '/images/Meilleur-Diag-OG.jpg', alt: 'Diagnostic immobilier à Paris' }],
+    images: [{ url: '/images/meilleur-diag-paris-og.jpg', alt: 'Diagnostic immobilier à Paris' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Diagnostic Immobilier Paris | Meilleur Diag',
     description: 'Diagnostiqueur Immobilier certifié à Paris et Île-de-France.',
-    images: ['/images/Meilleur-Diag-OG.jpg'],
+    images: ['/images/meilleur-diag-paris-og.jpg'],
   },
   robots: {
     index: true,
