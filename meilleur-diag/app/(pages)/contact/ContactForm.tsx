@@ -63,7 +63,7 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} noValidate>
 
       {/* Honeypot — hidden from real users */}
-      <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', opacity: 0, pointerEvents: 'none', tabIndex: -1 }}>
+      <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', opacity: 0, pointerEvents: 'none'}}>
         <input
           type="text"
           name="website"

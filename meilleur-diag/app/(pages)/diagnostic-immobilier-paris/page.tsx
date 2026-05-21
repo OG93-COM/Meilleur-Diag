@@ -292,14 +292,14 @@ export default function AProposPage() {
                 {/* CTA zones */}
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link
-                    href="/diagnostic-immo/diagnostic-immobilier-Seine-Saint-Denis"
+                    href="/diagnostic-immobilier/diagnostic-immobilier-seine-saint-denis"
                     className="inline-flex items-center gap-2 text-sm font-semibold text-black border-2 border-[#ebebeb] px-5 py-3 rounded-xl hover:border-primary transition-colors"
                   >
                     <MapPin size={15} className="text-primary" />
                     Diagnostic Seine-Saint-Denis
                   </Link>
                   <Link
-                    href="/diagnostic-immo/diagnostic-immobilier-aulnay-sous-bois"
+                    href="/diagnostic-immobilier/diagnostic-immobilier-aulnay-sous-bois"
                     className="inline-flex items-center gap-2 text-sm font-semibold text-black border-2 border-[#ebebeb] px-5 py-3 rounded-xl hover:border-primary transition-colors"
                   >
                     <MapPin size={15} className="text-primary" />
