@@ -78,7 +78,7 @@ export default function DiagnosticElectricitePage() {
         <section className="py-16 bg-white">
           <div className="container-custom">
             <div className="w-full rounded-lg shadow-lg overflow-hidden mb-10 bg-[#f8f8f8] aspect-auto">
-              <Image src="/images/services/diagnostic-immobilier-electricite.jpg" alt="Diagnostic électrique Paris"
+              <Image src="/images/services/diagnostic-electrique.jpg" alt="Diagnostic électrique Paris"
                 width={1216} height={395} className="object-cover" draggable={false}/>
             </div>
 

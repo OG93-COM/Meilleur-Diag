@@ -77,7 +77,7 @@ export default function DiagnosticGazPage() {
 
         <section className="py-16 bg-white">
           <div className="container-custom">
-            <div className="w-full rounded-2xl overflow-hidden mb-10 bg-[#f8f8f8] aspect-16/7">
+            <div className="w-full rounded-lg shadow-lg overflow-hidden mb-10 bg-[#f8f8f8] aspect-auto">
               <Image src="/images/services/diagnostic-GAZ.jpg" alt="Diagnostic gaz Paris" width={1216} height={395} className="object-cover" draggable={false}/>
             </div>
 
