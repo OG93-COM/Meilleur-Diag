@@ -88,7 +88,7 @@ export default function CTA() {
                   style={{ background: 'rgba(255,255,255,0.04)' }}
                   
                 >
-                  <span className="w-1.5 h-1.5 rounded-full flex-shrink-0 transition-colors" style={{ background: 'var(--color-primary)' }} />
+                  <span className="w-1.5 h-1.5 rounded-full shrink-0 transition-colors" style={{ background: 'var(--color-primary)' }} />
                   <span className="text-white/60 text-sm group-hover:text-white/90 transition-colors">{label}</span>
                 </Link>
               ))}
