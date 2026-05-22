@@ -93,6 +93,42 @@ const villes = [
     color: 'bg-pink-50 border-pink-100',
     dot: 'bg-pink-400',
   },
+  {
+    name: 'Montreuil',
+    dept: '93',
+    slug: 'diagnostic-immobilier-montreuil',
+    desc: 'Ville prisée de la petite couronne est. Maisons de ville, pavillons anciens, résidences récentes.',
+    highlight: 'Très demandé',
+    color: 'bg-violet-50 border-violet-100',
+    dot: 'bg-violet-400',
+  },
+  {
+    name: 'Vincennes',
+    dept: '94',
+    slug: 'diagnostic-immobilier-vincennes',
+    desc: 'Commune premium du Val-de-Marne, immeubles haussmanniens, bord du Bois de Vincennes.',
+    highlight: 'Marché premium',
+    color: 'bg-emerald-50 border-emerald-100',
+    dot: 'bg-emerald-400',
+  },
+  {
+    name: 'Boulogne-Billancourt',
+    dept: '92',
+    slug: 'diagnostic-immobilier-boulogne-billancourt',
+    desc: 'La plus peuplée des Hauts-de-Seine. Art déco, bord de Seine, marché très actif.',
+    highlight: 'Très demandé',
+    color: 'bg-orange-50 border-orange-100',
+    dot: 'bg-orange-400',
+  },
+  {
+    name: 'Versailles',
+    dept: '78',
+    slug: 'diagnostic-immobilier-versailles',
+    desc: 'Ville royale, patrimoine architectural exceptionnel, marché immobilier haut de gamme.',
+    highlight: 'Ville historique',
+    color: 'bg-amber-50 border-amber-100',
+    dot: 'bg-amber-400',
+  },
 ]
 
 const diagnostics = [
@@ -132,7 +168,7 @@ export default function DiagnosticImmobilierPage() {
       <main>
         <PageHeader
           title="Diagnostic Immobilier à Paris & Île-de-France"
-          subtitle="Experts certifiés pour tous vos diagnostics obligatoires — vente, location, travaux. Nous intervenons 7j/7 dans tous les départements d'Île-de-France."
+          subtitle="Experts certifiés pour tous vos diagnostics obligatoires — vente, location, travaux. Nous intervenons dans tous les départements d'Île-de-France."
           crumbs={[
             { label: 'Accueil', href: '/' },
             { label: 'Diagnostic Immobilier' },
@@ -144,18 +180,18 @@ export default function DiagnosticImmobilierPage() {
           <div className="container-custom">
             <div className="grid lg:grid-cols-2 gap-14 items-center">
               <div>
-                <span className="inline-block text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-5 bg-[#ffaa17]/10 text-[#e09200]">
+                <span className="inline-block text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-5 bg-primary/10 text-secondary">
                   Obligation légale
                 </span>
                 <h2 className="section-title mb-5">
                   Le diagnostic immo,<br />
-                  <span className="text-[#ffaa17]">une étape incontournable</span>
+                  <span className="text-primary">une étape incontournable</span>
                 </h2>
-                <p className="text-[#686a6f] text-base leading-relaxed mb-4">
+                <p className="text-mygray text-base leading-relaxed mb-4">
                   Le diagnostic immobilier est un ensemble de contrôles techniques réalisés par un diagnostiqueur certifié, obligatoires lors de toute vente ou location d'un bien en France. Ces contrôles informent l'acheteur ou le locataire sur l'état réel du logement : performance énergétique, présence d'amiante ou de plomb, état des installations électriques et gaz, risques naturels…
                 </p>
-                <p className="text-[#686a6f] text-base leading-relaxed mb-6">
-                  Tous ces documents sont regroupés dans le <strong className="text-[#222429]">Dossier de Diagnostic Technique (DDT)</strong>, qui doit être remis à l'acquéreur ou au locataire avant la signature du compromis de vente ou du bail. L'absence ou l'inexactitude d'un diagnostic engage la responsabilité du vendeur ou du bailleur.
+                <p className="text-mygray text-base leading-relaxed mb-6">
+                  Tous ces documents sont regroupés dans le <strong className="text-black">Dossier de Diagnostic Technique (DDT)</strong>, qui doit être remis à l'acquéreur ou au locataire avant la signature du compromis de vente ou du bail. L'absence ou l'inexactitude d'un diagnostic engage la responsabilité du vendeur ou du bailleur.
                 </p>
                 <div className="space-y-2.5 mb-8">
                   {[
@@ -166,8 +202,8 @@ export default function DiagnosticImmobilierPage() {
                     'Éviter l\'annulation de vente ou de bail pour défaut de diagnostic',
                   ].map((item) => (
                     <div key={item} className="flex items-start gap-3">
-                      <CheckCircle size={16} className="text-[#ffaa17] shrink-0 mt-0.5" />
-                      <p className="text-sm text-[#686a6f]">{item}</p>
+                      <CheckCircle size={16} className="text-primary shrink-0 mt-0.5" />
+                      <p className="text-sm text-mygray">{item}</p>
                     </div>
                   ))}
                 </div>
@@ -175,8 +211,8 @@ export default function DiagnosticImmobilierPage() {
                   <Link href="/devis" className="btn-primary px-6 py-3 rounded-xl">
                     Devis gratuit <ArrowRight size={16} />
                   </Link>
-                  <a href="tel:+33782326451" className="inline-flex items-center gap-2 border-2 border-[#ebebeb] text-[#222429] font-semibold px-6 py-3 rounded-xl hover:border-[#ffaa17] transition-colors text-sm">
-                    <Phone size={15} className="text-[#ffaa17]" /> 07 82 32 64 51
+                  <a href="tel:+33782326451" className="inline-flex items-center gap-2 border-2 border-[#ebebeb] text-black font-semibold px-6 py-3 rounded-xl hover:border-primary transition-colors text-sm">
+                    <Phone size={15} className="text-primary" /> 07 82 32 64 51
                   </a>
                 </div>
               </div>
@@ -198,7 +234,7 @@ export default function DiagnosticImmobilierPage() {
         <section className="py-14 bg-[#f8f8f8] border-y border-[#ebebeb]">
           <div className="container-custom">
             <div className="text-center mb-10">
-              <h2 className="text-2xl font-bold text-[#222429]" style={{ fontFamily: 'Syne, system-ui' }}>
+              <h2 className="text-2xl font-bold text-black" style={{ fontFamily: 'Syne, system-ui' }}>
                 Les diagnostics que nous réalisons
               </h2>
             </div>
@@ -207,9 +243,9 @@ export default function DiagnosticImmobilierPage() {
                 <Link
                   key={label}
                   href={href}
-                  className="flex items-center gap-2 bg-white rounded-xl px-4 py-3 text-xs font-semibold text-[#686a6f] border border-[#ebebeb] hover:border-[#ffaa17] hover:text-[#222429] transition-all duration-200"
+                  className="flex items-center gap-2 bg-white rounded-xl px-4 py-3 text-xs font-semibold text-mygray border border-[#ebebeb] hover:border-primary hover:text-black transition-all duration-200"
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#ffaa17] shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
                   {label}
                 </Link>
               ))}
@@ -221,15 +257,15 @@ export default function DiagnosticImmobilierPage() {
         <section className="py-20 bg-white">
           <div className="container-custom">
             <div className="text-center max-w-2xl mx-auto mb-14">
-              <span className="inline-block text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4 bg-[#ffaa17]/10 text-[#e09200]">
+              <span className="inline-block text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4 bg-primary/10 text-secondary">
                 Zones d'intervention
               </span>
               <h2 className="section-title mb-4">
                 Nous intervenons partout<br />
-                <span className="text-[#ffaa17]">en Île-de-France</span>
+                <span className="text-primary">en Île-de-France</span>
               </h2>
-              <p className="text-[#686a6f] text-base leading-relaxed">
-                Paris intramuros et tous les départements de la région — petite et grande couronne. Aucun frais de déplacement, intervention 7j/7.
+              <p className="text-mygray text-base leading-relaxed">
+                Paris intramuros et tous les départements de la région, petite et grande couronne. Aucun frais de déplacement.
               </p>
             </div>
 
@@ -246,16 +282,16 @@ export default function DiagnosticImmobilierPage() {
                         <span className={`w-1.5 h-1.5 rounded-full ${dot}`} />
                         {highlight}
                       </span>
-                      <h3 className="font-bold text-base text-[#222429] group-hover:text-[#ffaa17] transition-colors" style={{ fontFamily: 'Syne, system-ui' }}>
+                      <h3 className="font-bold text-base text-black group-hover:text-primary transition-colors" style={{ fontFamily: 'Syne, system-ui' }}>
                         {name}
                       </h3>
                       <p className="text-xs text-[#aaa] font-medium">Dép. {dept}</p>
                     </div>
                     <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-sm">
-                      <ArrowRight size={14} className="text-[#ffaa17]" />
+                      <ArrowRight size={14} className="text-primary" />
                     </div>
                   </div>
-                  <p className="text-xs text-[#686a6f] leading-relaxed">{desc}</p>
+                  <p className="text-xs text-mygray leading-relaxed">{desc}</p>
                 </Link>
               ))}
             </div>
@@ -263,31 +299,35 @@ export default function DiagnosticImmobilierPage() {
         </section>
 
         {/* Pourquoi faire appel */}
-        <section className="py-16 bg-[#f8f8f8]">
+        <section className="grid lg:grid-cols-2 gap-2 py-24 px-4 items-start overflow-hidden bg-[#f8f8f8]">
+            <div className='relative lg:ms-auto max-w-2xl'>
+                <Image  src="/images/meilleur-diag-fr-og.jpg" alt="Zones d'intervention Meilleur Diag — Île-de-France"
+                    width={600} height={450} className="w-full h-full max-w-200 object-cover mb-4 rounded-xl" />
+            </div>
           <div className="container-custom">
-            <div className="max-w-3xl mx-auto">
-              <h2 className="text-2xl font-bold text-[#222429] mb-5" style={{ fontFamily: 'Syne, system-ui' }}>
+            <div className="max-w-xl mx-auto">
+              <h2 className="text-2xl font-bold text-black mb-5" style={{ fontFamily: 'Syne, system-ui' }}>
                 Pourquoi réaliser un diagnostic immobilier ?
               </h2>
-              <p className="text-[#686a6f] text-base leading-relaxed mb-4">
-                En France, la loi impose au vendeur ou bailleur de remettre un <strong className="text-[#222429]">Dossier de Diagnostic Technique (DDT)</strong> complet lors de toute transaction immobilière. Ce dossier varie selon l'âge du bien, sa localisation et la nature de l'opération (vente ou location).
+              <p className="text-mygray text-base leading-relaxed mb-4">
+                En France, la loi impose au vendeur ou bailleur de remettre un <strong className="text-black">Dossier de Diagnostic Technique (DDT)</strong> complet lors de toute transaction immobilière. Ce dossier varie selon l'âge du bien, sa localisation et la nature de l'opération (vente ou location).
               </p>
-              <p className="text-[#686a6f] text-base leading-relaxed mb-8">
-                Un diagnostic manquant, périmé ou réalisé par un professionnel non certifié peut entraîner l'<strong className="text-[#222429]">annulation de la vente</strong>, une <strong className="text-[#222429]">réduction du prix</strong>, voire des poursuites judiciaires pour vice caché. Faire appel à Meilleur Diag, c'est s'assurer que chaque diagnostic est réalisé dans les règles, livré rapidement, et reconnu par tous les notaires d'Île-de-France.
+              <p className="text-mygray text-base leading-relaxed mb-8">
+                Un diagnostic manquant, périmé ou réalisé par un professionnel non certifié peut entraîner l'<strong className="text-black">annulation de la vente</strong>, une <strong className="text-black">réduction du prix</strong>, voire des poursuites judiciaires pour vice caché. Faire appel à Meilleur Diag, c'est s'assurer que chaque diagnostic est réalisé dans les règles, livré rapidement, et reconnu par tous les notaires d'Île-de-France.
               </p>
 
               <div className="grid sm:grid-cols-3 gap-4">
                 {[
                   { icon: Shield, title: 'Certifiés COFRAC', desc: 'Tous nos diagnostiqueurs sont certifiés par des organismes accrédités.' },
                   { icon: Clock, title: 'Rapport en 24h', desc: 'Document complet transmis par email le lendemain de l\'intervention.' },
-                  { icon: Award, title: '7j/7 en Île-de-France', desc: 'Du lundi au dimanche, sans frais de déplacement supplémentaires.' },
+                  { icon: Award, title: 'Paris et Île-de-France', desc: 'Sans frais de déplacement supplémentaires.' },
                 ].map(({ icon: Icon, title, desc }) => (
                   <div key={title} className="bg-white rounded-2xl p-5 border border-[#ebebeb]">
-                    <div className="w-9 h-9 rounded-xl bg-[#ffaa17]/10 flex items-center justify-center mb-3">
-                      <Icon size={17} className="text-[#ffaa17]" />
+                    <div className="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center mb-3">
+                      <Icon size={17} className="text-primary" />
                     </div>
-                    <h3 className="font-bold text-sm text-[#222429] mb-1" style={{ fontFamily: 'Syne, system-ui' }}>{title}</h3>
-                    <p className="text-xs text-[#686a6f] leading-relaxed">{desc}</p>
+                    <h3 className="font-bold text-sm text-black mb-1" style={{ fontFamily: 'Syne, system-ui' }}>{title}</h3>
+                    <p className="text-xs text-mygray leading-relaxed">{desc}</p>
                   </div>
                 ))}
               </div>
@@ -296,16 +336,16 @@ export default function DiagnosticImmobilierPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-16 bg-[#222429]">
+        <section className="py-16 bg-black">
           <div className="container-custom text-center">
             <h2 className="text-3xl font-bold text-white mb-4" style={{ fontFamily: 'Syne, system-ui' }}>
               Prêt à planifier votre diagnostic ?
             </h2>
             <p className="text-white/50 mb-8 max-w-lg mx-auto">
-              Devis gratuit en 2 minutes. Intervention 7j/7 partout en Île-de-France. Rapport certifié en moins de 24h.
+              Devis gratuit en 2 minutes. Intervention partout en Île-de-France et Paris. Rapport certifié en moins de 24h.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Link href="/devis" className="btn-primary px-7 py-4 rounded-xl text-base shadow-lg shadow-[#ffaa17]/20">
+              <Link href="/devis" className="btn-primary px-7 py-4 rounded-xl text-base shadow-lg shadow-primary/20">
                 Demander un devis gratuit <ArrowRight size={17} />
               </Link>
               <a href="tel:+33782326451" className="inline-flex items-center gap-2 justify-center font-semibold px-7 py-4 rounded-xl border border-white/15 text-white hover:bg-white/5 transition-all text-base">

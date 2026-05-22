@@ -185,6 +185,10 @@ export default function DiagnosticTermitesPage() {
                   <h2 className="text-2xl font-bold text-black mb-4" style={{ fontFamily: 'Syne, system-ui' }}>
                     Quand faire un diagnostic termites ?
                   </h2>
+                  <div className="rounded-lg shadow-sm overflow-hidden mb-6 bg-[#f8f8f8]">
+                    <Image src="/images/services/diagnostic-termites-france.jpg" alt="Les termites et leur impact sur les bâtiments"
+                      width={868} height={288} className="w-full object-cover max-h-72" draggable={false}/>
+                  </div>
                   <p className="text-mygray text-base leading-relaxed mb-4">
                     Le diagnostic termites est à réaliser <strong className="text-black">avant la mise en vente du bien</strong> dans les zones concernées. Mais il est conseillé de ne pas attendre la transaction pour agir : un contrôle préventif tous les 3 à 5 ans est recommandé pour les maisons individuelles, en particulier si le jardin comporte des souches ou du bois en décomposition.
                   </p>

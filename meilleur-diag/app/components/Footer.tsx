@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { FacebookLogoIcon, InstagramLogoIcon, LinkedinLogoIcon } from '@phosphor-icons/react'
 
 const services = [
-  { label: 'DPE — Performance Énergétique', href: '/services/diagnostic-performance-energetique' },
+  { label: 'DPE (Performance Énergétique)', href: '/services/diagnostic-performance-energetique' },
   { label: 'Diagnostic Amiante', href: '/services/diagnostic-amiante' },
   { label: 'Diagnostic Plomb', href: '/services/diagnostic-plomb' },
   { label: 'Diagnostic Électricité', href: '/services/diagnostic-electricite' },
@@ -25,6 +25,8 @@ const quickLinks = [
   { label: 'Diagnostic Immobiler Paris', href: '/diagnostic-immobilier' },
   { label: 'Demande de Devis', href: '/devis-diagnostic-immobilier' },
   { label: 'Contactez-Nous', href: '/contact' },
+  { label: 'Politique de confidentialité', href: '/politique-confidentialite' },
+  { label: 'FAQ', href: '/faq' },
 ]
 
 export default function Footer() {

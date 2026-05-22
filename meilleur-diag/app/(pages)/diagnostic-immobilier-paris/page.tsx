@@ -54,8 +54,8 @@ const valeurs = [
 ]
 
 const chiffres = [
-  { val: '1 500+', label: 'Diagnostics réalisés', sub: 'en Île-de-France' },
-  { val: '4.9/5', label: 'Note moyenne clients', sub: 'sur Trustpilot' },
+  { val: '500+', label: 'Diagnostics réalisés', sub: 'en Île-de-France' },
+  { val: '100%', label: 'Rapports conformes', sub: 'Certifiés & Assurés' },
   { val: '< 24h', label: 'Délai de livraison', sub: 'du rapport certifié' },
   { val: '7j/7', label: 'Disponibilité', sub: 'Paris & Île-de-France' },
 ]
@@ -135,7 +135,7 @@ export default function AProposPage() {
                   Sous la direction de <strong className="text-black">M. Mohamed Amine Kalai</strong>, notre équipe de diagnostiqueurs certifiés s'est construite autour d'une exigence commune : la précision technique, la rapidité d'intervention et la clarté des rapports. Pas de jargon inutile, pas de délai injustifié — juste un travail sérieux, bien fait, livré en 24 heures.
                 </p>
                 <p className="text-mygray text-base leading-relaxed mb-8">
-                  Aujourd'hui, Meilleur Diag accompagne des particuliers, des agences immobilières, des notaires et des promoteurs dans toute l'Île-de-France, avec plus de 1 500 diagnostics réalisés et une note client de 4,9/5 sur Trustpilot.
+                  Aujourd'hui, Meilleur Diag accompagne des particuliers, des agences immobilières, des notaires et des promoteurs dans toute l'Île-de-France, avec plus de 500 diagnostics réalisés.
                 </p>
 
                 <div className="flex flex-wrap gap-3">
@@ -164,14 +164,14 @@ export default function AProposPage() {
                     />
                   </div>
                   <div className="rounded-2xl bg-black p-5 text-center">
-                    <p className="stat-number text-3xl font-bold">1 500+</p>
-                    <p className="text-white/50 text-xs mt-1">Diagnostics réalisés</p>
+                    <p className="stat-number text-2xl font-bold">Diagnostiqueurs </p>
+                    <p className="text-white/50 text-xs mt-1">certifiés</p>
                   </div>
                 </div>
                 <div className="space-y-4 mt-8">
                   <div className="rounded-2xl bg-primary p-5 text-center">
-                    <p className="text-black text-3xl font-bold" style={{ fontFamily: 'Syne, system-ui' }}>4.9/5</p>
-                    <p className="text-black/60 text-xs mt-1">Note Trustpilot</p>
+                    <p className="text-black text-3xl font-bold" style={{ fontFamily: 'Syne, system-ui' }}>Paris</p>
+                    <p className="text-black/60 text-xs mt-1">Île-de-France</p>
                   </div>
                   <div className="rounded-2xl overflow-hidden aspect-4/5 bg-[#f8f8f8]">
                     <Image
@@ -237,25 +237,23 @@ export default function AProposPage() {
         {/* Zones géographiques */}
         <section className="py-20 bg-[#f8f8f8]">
           <div className="container-custom">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="grid lg:grid-cols-2 gap-16 items-start">
 
               {/* Image */}
-              <div className="relative">
-                <div className="rounded-3xl overflow-hidden aspect-4/3 bg-[#e8e8e8]">
-                  <Image
-                    src="/images/meilleur-diag-paris-og.jpg"
-                    alt="Zones d'intervention Meilleur Diag — Île-de-France"
-                    width={600}
-                    height={450}
-                    className="w-full h-full object-fit"
-                  />
+                <div className="flex flex-col justify-center items-center gap-2 rounded-xl overflow-hidden">
+                    <Image  src="/images/meilleur-diag-paris-og.jpg" alt="Zones d'intervention Meilleur Diag — Île-de-France"
+                        width={600} height={450} className="w-full h-full object-fit  mb-4" />
+                    <div className="flex flex-col sm:flex-row gap-3">
+                        <Link href="/diagnostic-immobilier/diagnostic-immobilier-seine-saint-denis" className="inline-flex items-center gap-2 text-sm font-semibold text-black border-2 border-[#ebebeb] px-5 py-3 rounded-xl hover:border-primary transition-colors">
+                            <MapPin size={15} className="text-primary" />
+                            Diagnostic Seine-Saint-Denis
+                        </Link>
+                        <Link href="/diagnostic-immobilier/diagnostic-immobilier-aulnay-sous-bois" className="inline-flex items-center gap-2 text-sm font-semibold text-black border-2 border-[#ebebeb] px-5 py-3 rounded-xl hover:border-primary transition-colors">
+                            <MapPin size={15} className="text-primary" />
+                            Diagnostic Aulnay-sous-Bois
+                        </Link>
+                    </div>
                 </div>
-                {/* Floating badge */}
-                {/* <div className="absolute -top-4 -right-4 bg-black rounded-2xl p-5 shadow-xl">
-                  <p className="text-primary font-bold text-lg leading-none" style={{ fontFamily: 'Syne, system-ui' }}>7j/7</p>
-                  <p className="text-white/50 text-xs mt-1">Intervention</p>
-                </div> */}
-              </div>
 
               {/* Text */}
               <div>
@@ -267,7 +265,7 @@ export default function AProposPage() {
                   <span className="text-primary">Île-de-France</span>
                 </h2>
                 <p className="text-mygray text-base leading-relaxed mb-6">
-                  Meilleur Diag intervient sur l'ensemble de la région parisienne, sans frais de déplacement supplémentaires. Du diagnostic en Seine-Saint-Denis à celui des Yvelines, nos diagnostiqueurs se déplacent chez vous selon vos disponibilités, 7 jours sur 7.
+                  Meilleur Diag intervient sur l'ensemble de la région parisienne, sans frais de déplacement supplémentaires. Du diagnostic en Seine-Saint-Denis à celui des Yvelines, nos diagnostiqueurs se déplacent chez vous selon vos disponibilités.
                 </p>
                 <p className="text-mygray text-base leading-relaxed mb-8">
                   Nous sommes particulièrement présents dans les départements de la petite et grande couronne, avec une connaissance fine des spécificités locales — zones à risque termites, communes classées zone inondable, secteurs à forte concentration de bâti ancien avec amiante ou plomb.
@@ -290,22 +288,7 @@ export default function AProposPage() {
                 </div>
 
                 {/* CTA zones */}
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <Link
-                    href="/diagnostic-immobilier/diagnostic-immobilier-seine-saint-denis"
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-black border-2 border-[#ebebeb] px-5 py-3 rounded-xl hover:border-primary transition-colors"
-                  >
-                    <MapPin size={15} className="text-primary" />
-                    Diagnostic Seine-Saint-Denis
-                  </Link>
-                  <Link
-                    href="/diagnostic-immobilier/diagnostic-immobilier-aulnay-sous-bois"
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-black border-2 border-[#ebebeb] px-5 py-3 rounded-xl hover:border-primary transition-colors"
-                  >
-                    <MapPin size={15} className="text-primary" />
-                    Diagnostic Aulnay-sous-Bois
-                  </Link>
-                </div>
+                
               </div>
             </div>
           </div>

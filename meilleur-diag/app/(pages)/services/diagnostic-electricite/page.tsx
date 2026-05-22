@@ -77,8 +77,8 @@ export default function DiagnosticElectricitePage() {
 
         <section className="py-16 bg-white">
           <div className="container-custom">
-            <div className="w-full rounded-lg shadow-lg overflow-hidden mb-10 bg-[#f8f8f8] aspect-16/7">
-              <Image src="/images/services/diagnostic-electrique.jpg" alt="Diagnostic électrique Paris"
+            <div className="w-full rounded-lg shadow-lg overflow-hidden mb-10 bg-[#f8f8f8] aspect-auto">
+              <Image src="/images/services/diagnostic-immobilier-electricite.jpg" alt="Diagnostic électrique Paris"
                 width={1216} height={395} className="object-cover" draggable={false}/>
             </div>
 
@@ -90,10 +90,6 @@ export default function DiagnosticElectricitePage() {
                   <h2 className="text-2xl font-bold text-black mb-4" style={{ fontFamily: 'Syne, system-ui' }}>
                     Qu'est-ce que le diagnostic électrique ?
                   </h2>
-                  <div className="rounded-lg shadow-sm overflow-hidden mb-6 bg-[#f8f8f8]">
-                    <Image src="/images/services/diagnostic-immobilier-electrique.jpg" alt="Inspection installation électrique"
-                      width={868} height={288} className="w-full object-cover max-h-72" draggable={false}/>
-                  </div>
                   <p className="text-mygray text-base leading-relaxed mb-4">
                     Le diagnostic électrique — officiellement appelé <strong className="text-black">état de l'installation intérieure d'électricité</strong> — est une évaluation technique qui permet d'identifier les défauts et anomalies susceptibles de compromettre la sécurité des occupants. Il couvre l'ensemble de l'installation électrique depuis le compteur jusqu'aux prises et interrupteurs.
                   </p>
@@ -138,6 +134,10 @@ export default function DiagnosticElectricitePage() {
                   <h2 className="text-2xl font-bold text-black mb-4" style={{ fontFamily: 'Syne, system-ui' }}>
                     Pourquoi le faire réaliser ?
                   </h2>
+                  <div className="rounded-lg shadow-sm overflow-hidden mb-6 bg-[#f8f8f8]">
+                    <Image src="/images/services/diagnostic-immobilier-electricite.jpg" alt="Inspection installation électrique"
+                      width={868} height={288} className="w-full object-cover max-h-72" draggable={false}/>
+                  </div>
                   <p className="text-mygray text-base leading-relaxed mb-4">
                     En France, les installations électriques défectueuses sont à l'origine de <strong className="text-black">plus de 80 000 incendies domestiques par an</strong>, soit un tiers des incendies résidentiels. Une installation vieillissante peut présenter des risques invisibles à l'œil nu : fils endommagés, prises surchargées, tableau électrique obsolète.
                   </p>
@@ -195,6 +195,10 @@ export default function DiagnosticElectricitePage() {
                   <h2 className="text-2xl font-bold text-black mb-4" style={{ fontFamily: 'Syne, system-ui' }}>
                     Pourquoi choisir Meilleur Diag ?
                   </h2>
+                  <div className="rounded-lg shadow-sm overflow-hidden mb-6 bg-[#f8f8f8]">
+                    <Image src="/images/services/diagnostic-immobilier-electricite-paris.jpg" alt="Inspection installation électrique"
+                      width={868} height={288} className="w-full object-cover max-h-72" draggable={false}/>
+                  </div>
                   <p className="text-mygray text-base leading-relaxed mb-4">
                     Nos diagnostiqueurs électricité sont certifiés par des organismes accrédités COFRAC et se forment régulièrement aux évolutions réglementaires. Ils interviennent avec leur propre matériel de mesure homologué pour des résultats précis et incontestables.
                   </p>

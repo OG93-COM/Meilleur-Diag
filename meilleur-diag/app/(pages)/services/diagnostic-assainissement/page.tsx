@@ -88,10 +88,6 @@ export default function DiagnosticAssainissementPage() {
                   <h2 className="text-2xl font-bold text-black mb-4" style={{ fontFamily: 'Syne, system-ui' }}>
                     Pourquoi réaliser un diagnostic assainissement ?
                   </h2>
-                  <div className="rounded-2xl overflow-hidden mb-6 bg-[#f8f8f8]">
-                    <Image  src="/images/services/diagnostic-immobilier-assainissement.jpg" alt="Système d'assainissement inspecté"
-                      width={868} height={288} className="w-full object-cover max-h-72" draggable={false}/>
-                  </div>
                   <p className="text-mygray text-base leading-relaxed mb-4">
                     Le diagnostic assainissement évalue l'état et la conformité du système d'évacuation des eaux usées de votre bien — depuis l'arrivée d'eau jusqu'au raccordement au réseau communal ou à l'installation individuelle (fosse septique, micro-station). Lors d'une vente, la loi impose d'informer l'acheteur sur le type de système en place et son état de fonctionnement.
                   </p>
@@ -108,6 +104,10 @@ export default function DiagnosticAssainissementPage() {
                   <p className="text-mygray text-base leading-relaxed mb-6">
                     Il existe deux grandes catégories de systèmes d'assainissement, avec des obligations différentes selon le type :
                   </p>
+                  <div className="rounded-2xl overflow-hidden mb-6 bg-[#f8f8f8]">
+                    <Image  src="/images/services/diagnostic-assainissement.jpg" alt="Système d'assainissement inspecté"
+                      width={868} height={288} className="w-full object-cover max-h-72" draggable={false}/>
+                  </div>
 
                   <div className="space-y-4 mb-6">
                     {[
@@ -211,6 +211,10 @@ export default function DiagnosticAssainissementPage() {
                   <p className="text-mygray text-base leading-relaxed mb-4">
                     Oui, pour toute vente d'immeuble à usage d'habitation non raccordé au réseau public de collecte des eaux usées (assainissement non collectif). Le contrôle SPANC doit être joint au DDT remis à l'acheteur. Pour les biens en assainissement collectif, une attestation de conformité du branchement peut être demandée selon les communes.
                   </p>
+                  <div className="rounded-2xl overflow-hidden mb-6 bg-[#f8f8f8]">
+                    <Image  src="/images/services/diagnostic-immobilier-assainissement-paris.jpg" alt="Système d'assainissement inspecté"
+                      width={868} height={288} className="w-full object-cover max-h-72" draggable={false}/>
+                  </div>
 
                   <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-5">
                     <div className="flex items-start gap-3">

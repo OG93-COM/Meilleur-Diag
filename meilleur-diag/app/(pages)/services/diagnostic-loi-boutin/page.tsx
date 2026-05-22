@@ -77,7 +77,7 @@ export default function DiagnosticLoiBoutinPage() {
 
         <section className="py-16 bg-white">
           <div className="container-custom">
-            <div className="w-full rounded-lg overflow-hidden mb-10 bg-[#f8f8f8] aspect-16/7">
+            <div className="w-full rounded-lg overflow-hidden mb-10 bg-[#f8f8f8] aspect-auto">
               <Image src="/images/services/diagnostic-loi-boutin.jpg" alt="Mesurage Loi Boutin Paris"
                 width={1216} height={395} className="object-cover" draggable={false}/>
             </div>
@@ -90,10 +90,6 @@ export default function DiagnosticLoiBoutinPage() {
                   <h2 className="text-2xl font-bold text-black mb-4" style={{ fontFamily: 'Syne, system-ui' }}>
                     Qu'est-ce que la Loi Boutin ?
                   </h2>
-                  <div className="rounded-lg shadow-sm overflow-hidden mb-6 bg-[#f8f8f8]">
-                    <Image src="/images/services/diagnostic-immobilier-loi-boutin.jpg" alt="Mesurage surface habitable Loi Boutin"
-                      width={868} height={288} className="w-full object-cover max-h-72"/>
-                  </div>
                   <p className="text-mygray text-base leading-relaxed mb-4">
                     Promulguée le 25 mars 2009 sous l'égide de Christine Boutin, alors ministre du Logement, la Loi Boutin a introduit une obligation claire pour tous les propriétaires bailleurs : <strong className="text-black">mentionner la surface habitable du logement dans tout contrat de location</strong>, qu'il s'agisse d'une location vide ou meublée.
                   </p>
@@ -168,6 +164,10 @@ export default function DiagnosticLoiBoutinPage() {
                   <h2 className="text-2xl font-bold text-black mb-4" style={{ fontFamily: 'Syne, system-ui' }}>
                     Comment Meilleur Diag réalise ce mesurage ?
                   </h2>
+                  <div className="rounded-lg shadow-sm overflow-hidden mb-6 bg-[#f8f8f8]">
+                    <Image src="/images/services/diagnostic-loi-boutin-paris.jpg" alt="Mesurage surface habitable Loi Boutin"
+                      width={868} height={288} className="w-full object-cover max-h-72" draggable={false}/>
+                  </div>
                   <p className="text-mygray text-base leading-relaxed mb-6">
                     Notre intervention se déroule en trois étapes précises et documentées :
                   </p>
@@ -239,6 +239,10 @@ export default function DiagnosticLoiBoutinPage() {
                   <h2 className="text-2xl font-bold text-black mb-4" style={{ fontFamily: 'Syne, system-ui' }}>
                     Pourquoi choisir Meilleur Diag ?
                   </h2>
+                  <div className="rounded-lg shadow-sm overflow-hidden mb-6 bg-[#f8f8f8]">
+                    <Image src="/images/services/diagnostic-loi-boutin-france.jpg" alt="Mesurage surface habitable Loi Boutin"
+                      width={868} height={288} className="w-full object-cover max-h-72" draggable={false}/>
+                  </div>
                   <p className="text-mygray text-base leading-relaxed mb-4">
                     Bien que la loi n'impose pas formellement de recourir à un diagnostiqueur certifié pour le mesurage Boutin (contrairement au Carrez), faire appel à un professionnel offre une garantie que l'auto-mesurage ne peut pas fournir : en cas de contestation du locataire, un rapport professionnel constitue une <strong className="text-black">preuve opposable</strong> devant un tribunal.
                   </p>

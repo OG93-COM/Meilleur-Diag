@@ -87,9 +87,6 @@ export default function DiagnosticGazPage() {
                 {/* Quoi */}
                 <div id="quoi" className="mb-12">
                   <h2 className="text-2xl font-bold text-black mb-4" style={{ fontFamily: 'Syne, system-ui' }}>Qu'est-ce que le diagnostic gaz ?</h2>
-                  <div className="rounded-lg shadow-sm overflow-hidden mb-6 bg-[#f8f8f8]">
-                    <Image src="/images/services/diagnostic-immobilier-GAZ.jpg" alt="Inspection installation gaz" width={868} height={288} className="w-full object-cover max-h-72" draggable={false}/>
-                  </div>
                   <p className="text-mygray text-base leading-relaxed mb-4">
                     Le diagnostic gaz — officiellement <strong className="text-black">état de l'installation intérieure de gaz</strong> — est un contrôle technique qui évalue la sécurité de l'ensemble de l'installation gaz d'un logement. Il couvre les équipements alimentés en gaz naturel ou en propane : chaudières, chauffe-bains, cuisinières, tuyauteries et raccordements.
                   </p>
@@ -101,6 +98,9 @@ export default function DiagnosticGazPage() {
                 {/* Pourquoi */}
                 <div id="pourquoi" className="mb-12">
                   <h2 className="text-2xl font-bold text-black mb-4" style={{ fontFamily: 'Syne, system-ui' }}>Pourquoi est-il important ?</h2>
+                  <div className="rounded-lg shadow-sm overflow-hidden mb-6 bg-[#f8f8f8]">
+                    <Image src="/images/services/diagnostic-immobilier-gaz-paris.jpg" alt="Inspection installation gaz" width={868} height={288} className="w-full object-cover max-h-72" draggable={false}/>
+                  </div>
                   <p className="text-mygray text-base leading-relaxed mb-4">
                     Les installations gaz vieillissent et peuvent se dégrader silencieusement. Une fuite de gaz non détectée, un appareil de chauffage mal entretenu ou une ventilation insuffisante peuvent avoir des conséquences dramatiques. Le diagnostic gaz permet d'identifier ces risques avant qu'ils ne se manifestent.
                   </p>
@@ -143,6 +143,9 @@ export default function DiagnosticGazPage() {
                 {/* Comment */}
                 <div id="comment" className="mb-12">
                   <h2 className="text-2xl font-bold text-black mb-4" style={{ fontFamily: 'Syne, system-ui' }}>Comment Meilleur Diag réalise ce diagnostic ?</h2>
+                  <div className="rounded-lg shadow-sm overflow-hidden mb-6 bg-[#f8f8f8]">
+                    <Image src="/images/services/meilleur-diagnostic-immobilier-gaz.jpg" alt="Inspection installation gaz" width={868} height={288} className="w-full object-cover max-h-72" draggable={false}/>
+                  </div>
                   <p className="text-mygray text-base leading-relaxed mb-6">
                     Nos diagnostiqueurs certifiés effectuent une inspection complète selon la norme NF P45-500. L'intervention dure généralement entre 1 et 2 heures selon la complexité de l'installation.
                   </p>
@@ -196,6 +199,9 @@ export default function DiagnosticGazPage() {
                 {/* Conclusion */}
                 <div id="conclusion" className="mb-6">
                   <h2 className="text-2xl font-bold text-black mb-4" style={{ fontFamily: 'Syne, system-ui' }}>Conclusion</h2>
+                  <div className="rounded-lg shadow-sm overflow-hidden mb-6 bg-[#f8f8f8]">
+                    <Image src="/images/services/diagnostic-gaz-paris.jpg" alt="Inspection installation gaz" width={868} height={288} className="w-full object-cover max-h-72" draggable={false}/>
+                  </div>
                   <p className="text-mygray text-base leading-relaxed mb-4">
                     Le diagnostic gaz est une obligation légale, mais surtout une mesure de sécurité vitale. En France, les accidents liés au gaz — intoxications au CO et explosions — causent chaque année plusieurs centaines de victimes, souvent dans des logements dont l'installation n'avait pas été contrôlée depuis des années.
                   </p>

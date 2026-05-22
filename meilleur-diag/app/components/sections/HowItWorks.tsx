@@ -13,7 +13,7 @@ const steps = [
   {
     num: '02',
     title: 'Confirmation et prise de rendez-vous',
-    desc: 'Nous vous contactons rapidement pour confirmer votre devis et fixer un rendez-vous selon vos disponibilités, 7 jours sur 7.',
+    desc: 'Nous vous contactons rapidement pour confirmer votre devis et fixer un rendez-vous selon vos disponibilités.',
     icon: '📅',
   },
   {

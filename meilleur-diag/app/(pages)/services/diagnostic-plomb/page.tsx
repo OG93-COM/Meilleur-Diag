@@ -77,7 +77,7 @@ export default function DiagnosticPlombPage() {
 
         <section className="py-16 bg-white">
           <div className="container-custom">
-            <div className="w-full rounded-2xl overflow-hidden mb-10 bg-[#f8f8f8]">
+            <div className="w-full rounded-2xl overflow-hidden mb-10 bg-[#f8f8f8] aspect-auto">
               <Image src="/images/services/diagnostic-plomb-paris.jpg"
                 alt="Diagnostic plomb Paris — CREP" width={1216} height={395} className="object-cover"/>
             </div>
@@ -105,7 +105,7 @@ export default function DiagnosticPlombPage() {
                   </h2>
                   <div className="rounded-lg shadow-sm overflow-hidden mb-6 bg-[#f8f8f8]">
                     <Image src="/images/services/diagnostic-immobilier-plomb.jpg" alt="Détection plomb dans les peintures"
-                      width={868} height={288} className="w-full object-cover max-h-72"/>
+                      width={868} height={288} className="w-full object-cover max-h-72" draggable={false}/>
                   </div>
                   <p className="text-mygray text-base leading-relaxed mb-4">
                     Le saturnisme est une intoxication au plomb qui se manifeste de façon progressive et souvent silencieuse. Les enfants de moins de 6 ans sont les premières victimes, car leur organisme en développement absorbe le plomb jusqu'à cinq fois plus efficacement que celui d'un adulte.

@@ -80,7 +80,7 @@ export default function DiagnosticAmiantePage() {
         {/* Main content */}
         <section className="py-16 bg-white">
           <div className="container-custom">
-            <div className="w-full h-full rounded-2xl overflow-hidden mb-10 bg-light">
+            <div className="w-full rounded-lg shadow-lg overflow-hidden mb-10 bg-light aspect-auto">
               <Image src="/images/services/diagnostic-amiante.jpg" alt="Diagnostic immobilier amiante Paris"
                 width={1216} height={395} className="object-cover" draggable={false} />
             </div>

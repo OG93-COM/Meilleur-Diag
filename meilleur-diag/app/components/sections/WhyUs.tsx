@@ -84,10 +84,10 @@ export default function WhyUs() {
             {/* Mini stats */}
             <div className="grid grid-cols-2 gap-4">
               {[
-                { val: '1 500+', label: 'Diagnostics' },
-                { val: '4.9/5', label: 'Note moyenne' },
+                { val: '500+', label: 'Diagnostics' },
+                { val: '100%', label: 'Rapports conformes' },
                 { val: '24h', label: 'Délai rapport' },
-                { val: '7j/7', label: 'Disponible' },
+                { val: '100%', label: 'Certifiés & Assurés' },
               ].map(({ val, label }) => (
                 <div key={label} className="bg-white rounded-2xl p-4" style={{ border: '1px solid #ebebeb' }}>
                   <p className="stat-number text-2xl font-bold">{val}</p>

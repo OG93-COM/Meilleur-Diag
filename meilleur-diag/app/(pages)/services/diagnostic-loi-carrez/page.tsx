@@ -77,7 +77,7 @@ export default function DiagnosticLoiCarrezPage() {
 
         <section className="py-16 bg-white">
           <div className="container-custom">
-            <div className="w-full rounded-2xl overflow-hidden mb-10 bg-[#f8f8f8] aspect-16/7">
+            <div className="w-full rounded-2xl overflow-hidden mb-10 bg-[#f8f8f8] aspect-auto">
               <Image src="/images/services/diagnostic-loi-carrez.jpg" alt="Mesurage Loi Carrez Paris" width={1216} height={395} className="object-cover" draggable={false}/>
             </div>
 
@@ -87,9 +87,6 @@ export default function DiagnosticLoiCarrezPage() {
                 {/* Quoi */}
                 <div id="quoi" className="mb-12">
                   <h2 className="text-2xl font-bold text-black mb-4" style={{ fontFamily: 'Syne, system-ui' }}>Qu'est-ce que la Loi Carrez ?</h2>
-                  <div className="rounded-lg shadow-sm overflow-hidden mb-6 bg-[#f8f8f8]">
-                    <Image src="/images/services/diagnostic-immobilier-loi-carrez.jpg" alt="Mesurage superficie privative Loi Carrez" width={868} height={288} className="w-full object-cover max-h-72"/>
-                  </div>
                   <p className="text-mygray text-base leading-relaxed mb-4">
                     La Loi Carrez, entrée en vigueur le 18 décembre 1996, impose la mention de la <strong className="text-black">superficie privative</strong> dans tout acte de vente d'un lot en copropriété. Son objectif est simple : garantir à l'acheteur une information fiable et transparente sur la surface réelle du bien qu'il acquiert.
                   </p>
@@ -101,6 +98,9 @@ export default function DiagnosticLoiCarrezPage() {
                 {/* Calcul */}
                 <div id="calcule" className="mb-12">
                   <h2 className="text-2xl font-bold text-black mb-4" style={{ fontFamily: 'Syne, system-ui' }}>Comment est calculée la surface Carrez ?</h2>
+                  <div className="rounded-lg shadow-sm overflow-hidden mb-6 bg-[#f8f8f8]">
+                    <Image src="/images/services/diagnostic-immobilier-loi-carrez.jpg" alt="Mesurage superficie privative Loi Carrez" width={868} height={488} className="w-full object-cover max-h-112"/>
+                  </div>
                   <p className="text-mygray text-base leading-relaxed mb-4">
                     La surface privative Carrez est la superficie des planchers des locaux clos et couverts après déduction des surfaces occupées par certains éléments. Seules les surfaces avec une <strong className="text-black">hauteur sous plafond supérieure ou égale à 1,80 mètre</strong> sont comptabilisées.
                   </p>
@@ -129,6 +129,9 @@ export default function DiagnosticLoiCarrezPage() {
                 {/* Quand */}
                 <div id="quand" className="mb-12">
                   <h2 className="text-2xl font-bold text-black mb-4" style={{ fontFamily: 'Syne, system-ui' }}>Quand réaliser ce mesurage ?</h2>
+                  <div className="rounded-lg shadow-sm overflow-hidden mb-6 bg-[#f8f8f8]">
+                    <Image src="/images/services/diagnostic-immobilier-loi-carrez-paris.jpg" alt="Mesurage superficie privative Loi Carrez" width={868} height={288} className="w-full object-cover max-h-112"/>
+                  </div>
                   <p className="text-mygray text-base leading-relaxed mb-4">
                     Le mesurage Loi Carrez doit être réalisé <strong className="text-black">avant la signature du compromis de vente</strong>. Il est intégré au Dossier de Diagnostic Technique (DDT) et doit être annexé à la promesse de vente ainsi qu'à l'acte authentique.
                   </p>
@@ -177,6 +180,9 @@ export default function DiagnosticLoiCarrezPage() {
                 {/* Refaire */}
                 <div id="refaire" className="mb-12">
                   <h2 className="text-2xl font-bold text-black mb-4" style={{ fontFamily: 'Syne, system-ui' }}>Quand refaire un diagnostic Loi Carrez ?</h2>
+                  <div className="rounded-lg shadow-sm overflow-hidden mb-6 bg-[#f8f8f8]">
+                    <Image src="/images/services/diagnostic-loi-carrez-france.jpg" alt="Mesurage superficie privative Loi Carrez en France" width={868} height={288} className="w-full object-cover max-h-112"/>
+                  </div>
                   <p className="text-mygray text-base leading-relaxed mb-4">
                     Même si votre précédent mesurage est techniquement valable, il est fortement conseillé d'en commander un nouveau dans plusieurs situations :
                   </p>

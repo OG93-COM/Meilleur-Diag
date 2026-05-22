@@ -2,9 +2,14 @@ import Link from 'next/link'
 import { Phone, ArrowRight, MapPin } from 'lucide-react'
 
 const zones = [
-  'Paris (75)', 'Hauts-de-Seine (92)', 'Seine-Saint-Denis (93)',
-  'Val-de-Marne (94)', 'Yvelines (78)', 'Essonne (91)',
-  'Val-d\'Oise (95)', 'Seine-et-Marne (77)',
+  { label: 'Paris (75)',               href: '/diagnostic-immobilier' },
+  { label: 'Hauts-de-Seine (92)',      href: '/diagnostic-immobilier/diagnostic-immobilier-hauts-de-seine' },
+  { label: 'Seine-Saint-Denis (93)',   href: '/diagnostic-immobilier/diagnostic-immobilier-seine-saint-denis' },
+  { label: 'Val-de-Marne (94)',        href: '/diagnostic-immobilier/diagnostic-immobilier-val-de-marne' },
+  { label: 'Yvelines (78)',            href: '/diagnostic-immobilier/diagnostic-immobilier-yvelines' },
+  { label: 'Essonne (91)',             href: '/diagnostic-immobilier/diagnostic-immobilier-essonne' },
+  { label: "Val-d'Oise (95)",          href: '/diagnostic-immobilier/diagnostic-immobilier-val-doise' },
+  { label: 'Seine-et-Marne (77)',      href: '/diagnostic-immobilier/diagnostic-immobilier-seine-et-marne' },
 ]
 
 export default function CTA() {
@@ -35,7 +40,7 @@ export default function CTA() {
                 07 82 32 64 51
               </Link>
               <Link
-                href="/devis"
+                href="/devis-diagnostic-immobilier"
                 className="inline-flex items-center gap-2 justify-center font-semibold px-7 py-4 rounded-xl border transition-all duration-200 text-base"
                 style={{ borderColor: 'rgba(255,255,255,0.15)', color: 'white' }}
               >
@@ -47,8 +52,8 @@ export default function CTA() {
             {/* Trust */}
             <div className="flex items-center gap-6">
               <div>
-                <p className="stat-number text-2xl font-bold">4.9/5</p>
-                <p className="text-white/40 text-xs">sur Trustpilot</p>
+                <p className="stat-number text-2xl font-bold">100%</p>
+                <p className="text-white/40 text-xs">Rapports conformes</p>
               </div>
               <div className="w-px h-10" style={{ background: 'rgba(255,255,255,0.1)' }} />
               <div>
@@ -75,15 +80,17 @@ export default function CTA() {
             </div>
 
             <div className="grid grid-cols-2 gap-2 mb-6">
-              {zones.map((zone) => (
-                <div
-                  key={zone}
-                  className="flex items-center gap-2 rounded-xl px-3 py-2.5"
+              {zones.map(({ label, href }) => (
+                <Link
+                  key={href}
+                  href={href}
+                  className="flex items-center gap-2 rounded-xl px-3 py-2.5 transition-all duration-150 group"
                   style={{ background: 'rgba(255,255,255,0.04)' }}
+                  
                 >
-                  <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: 'var(--color-primary)' }} />
-                  <span className="text-white/60 text-sm">{zone}</span>
-                </div>
+                  <span className="w-1.5 h-1.5 rounded-full flex-shrink-0 transition-colors" style={{ background: 'var(--color-primary)' }} />
+                  <span className="text-white/60 text-sm group-hover:text-white/90 transition-colors">{label}</span>
+                </Link>
               ))}
             </div>
 
@@ -100,8 +107,11 @@ export default function CTA() {
                   <p className="text-white/40 text-xs mb-2">
                     Envoyez-nous votre demande et nous vous répondons dans l'heure.
                   </p>
-                  <Link href="mailto:contact@meilleur-diag.com"
-                    className="text-sm text-primary font-semibold transition-colors">
+                  <Link
+                    href="mailto:contact@meilleur-diag.com"
+                    className="text-sm font-semibold transition-colors"
+                    style={{ color: 'var(--color-primary)' }}
+                  >
                     contact@meilleur-diag.com
                   </Link>
                 </div>
