@@ -26,8 +26,8 @@ const INITIAL: FormData = {
 }
 
 const packs = [
-  { value: 'Pack diagnostics complet VENTE',    label: 'Vente',             icon: Home,       desc: 'DPE, Amiante, Plomb, Électricité, Gaz, ERP…' },
-  { value: 'Pack diagnostics complet Location', label: 'Location',          icon: Building2,  desc: 'DPE, Amiante, Plomb, Électricité, Gaz, ERP…' },
+  { value: 'Pack diagnostics complet VENTE',    label: 'Vente',             icon: Home,       desc: 'DPE, Amiante, Plomb, Gaz, ERP…' },
+  { value: 'Pack diagnostics complet Location', label: 'Location',          icon: Building2,  desc: 'DPE, Amiante, Plomb, Gaz, ERP…' },
   { value: 'Audit Énergétique',                 label: 'Audit Énergétique', icon: BarChart3,  desc: 'Performances énergétiques complètes.' },
 ]
 
@@ -191,7 +191,7 @@ export default function DevisFormMulti() {
                         Étape {sub + 1} / 4
                       </p>
                       <h3 className="text-2xl font-bold text-white mb-3 leading-snug" style={{ fontFamily: 'Syne, system-ui' }}>
-                        {sidebar.title}
+                        {sidebar.title}ddd
                       </h3>
                       <p className="text-white/60 text-sm leading-relaxed">
                         {sidebar.body}
@@ -243,7 +243,7 @@ export default function DevisFormMulti() {
 
               {/* ── sub 0 — Pack ──────────────────────────────── */}
               {step === 0 && sub === 0 && (
-                <div className="p-7 md:p-9 flex-1">
+                <div className="p-5 md:p-9 flex-1">
                   <p className="text-xs font-bold uppercase tracking-widest text-[#aaa] mb-2">1 / 4</p>
                   <h3 className="font-bold text-lg text-black mb-6" style={{ fontFamily: 'Syne, system-ui' }}>
                     Quel diagnostic souhaitez-vous ?
@@ -255,7 +255,7 @@ export default function DevisFormMulti() {
                       return (
                         <button key={p.value} type="button"
                           onClick={() => { set('pack', p.value); setSub(1) }}
-                          className={`flex items-center gap-4 w-full px-5 py-4 rounded-2xl border-2 text-left transition-all duration-150 cursor-pointer
+                          className={`flex items-center gap-3 w-full px-3 py-4 rounded-2xl border-2 text-left transition-all duration-150 cursor-pointer
                             ${active ? 'border-primary bg-primary/5' : 'border-[#ebebeb] bg-white hover:border-primary/40'}`}
                         >
                           <div className={`w-11 h-11 rounded-xl flex items-center justify-center shrink-0 transition-colors ${active ? 'bg-primary' : 'bg-[#f4f4f4]'}`}>

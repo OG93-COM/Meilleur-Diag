@@ -32,7 +32,7 @@ export default function Hero() {
         alt="Diagnostic immobilier Paris Île-de-France"
         fill
         priority
-        className="object-cover object-center opacity-10"
+        className="object-cover object-center opacity-5"
       />
       {/* Glow orbs */}
       <div className="absolute top-1/4 right-1/4 w-80 h-80 rounded-full pointer-events-none bg-[radial-gradient(circle,rgba(255,170,23,0.12)_0%,transparent_70%)] animate-pulse" />
@@ -120,12 +120,13 @@ export default function Hero() {
                   ))}
                 </div>
 
-                <div className="pt-4" style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+                {/* <div className="pt-4" style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}>
                   <p className="text-white/40 text-xs mb-1">Rapport disponible en</p>
                   <p className="text-white font-bold text-lg" style={{ fontFamily: 'Syne, system-ui' }}>
                     Moins de <span style={{ color: 'var(--color-primary)' }}>24h</span>
                   </p>
-                </div>
+                </div> */}
+                <Image src={"/images/diagnostic-immobilier-dpe.png"} width={200} height={200} alt='diagnostic dpe schema' className='absolute -bottom-30 right-14'/>
               </div>
 
               {/* Floating mini badge */}
