@@ -82,77 +82,162 @@ export async function sendDevisEmail( data: DevisPayload ): Promise<{ success: b
   try {
     // — Internal notification —
     await resend.emails.send({
-      from:    'Meilleur Diag <contact@meilleur-diag.com>',
+      from:    'Meilleur Diag <noreply@meilleur-diag.com>',
       to:      ['contact@meilleur-diag.com'],
       replyTo: email,
       subject: `📋 Nouvelle demande de devis — ${pack}`,
+      // Email interne (notification devis)
       html: `
-<!DOCTYPE html>
-<html lang="fr">
-<head><meta charset="UTF-8"/></head>
-<body style="margin:0;padding:0;background:#f4f4f0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
-<table width="100%" cellpadding="0" cellspacing="0" style="background:#f4f4f0;padding:40px 16px;">
-  <tr><td align="center">
-    <table width="100%" style="max-width:600px;" cellpadding="0" cellspacing="0">
+      <!DOCTYPE html>
+      <html lang="fr">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>Nouvelle demande de devis — Meilleur Diag</title>
+      </head>
+      <body style="margin:0;padding:0;background:#f5f5f5;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+        <table width="100%" cellpadding="0" cellspacing="0" style="background:#f5f5f5;padding:40px 16px;">
+          <tr><td align="center">
+            <table width="100%" style="max-width:600px;" cellpadding="0" cellspacing="0">
 
-      <!-- Header -->
-      <tr>
-        <td style="background:#0a0a0a;border-radius:16px 16px 0 0;padding:32px 40px;">
-          <p style="margin:0;font-size:22px;font-weight:700;color:#fff;letter-spacing:-0.5px;">
-            Meilleur<span style="color:#c8f135;">Diag</span>
-          </p>
-          <p style="margin:6px 0 0;font-size:12px;color:rgba(255,255,255,0.4);letter-spacing:2px;text-transform:uppercase;">
-            Nouvelle demande de devis
-          </p>
-        </td>
-      </tr>
+              <!-- HEADER -->
+              <tr>
+                <td style="background:#222429;border-radius:16px 16px 0 0;padding:28px 40px;">
+                  <p style="margin:0;font-size:24px;font-weight:800;color:#ffffff;letter-spacing:-0.5px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+                    Meilleur<span style="color:#ffaa17;">Diag</span>
+                  </p>
+                  <p style="margin:6px 0 0;font-size:11px;color:rgba(255,255,255,0.35);letter-spacing:3px;text-transform:uppercase;">
+                    Diagnostic Immobilier · Paris & Île-de-France
+                  </p>
+                </td>
+              </tr>
 
-      <!-- Pack banner -->
-      <tr>
-        <td style="background:#c8f135;padding:14px 40px;">
-          <p style="margin:0;font-size:11px;font-weight:700;color:#0a0a0a;letter-spacing:2px;text-transform:uppercase;">Pack demandé</p>
-          <p style="margin:4px 0 0;font-size:18px;font-weight:700;color:#0a0a0a;">${pack}</p>
-        </td>
-      </tr>
+              <!-- BANDEAU PACK -->
+              <tr>
+                <td style="background:#ffaa17;padding:14px 40px;">
+                  <p style="margin:0;font-size:10px;font-weight:700;color:#222429;letter-spacing:2.5px;text-transform:uppercase;">
+                    📋 Nouvelle demande de devis
+                  </p>
+                  <p style="margin:5px 0 0;font-size:18px;font-weight:700;color:#222429;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+                    ${pack}
+                  </p>
+                </td>
+              </tr>
 
-      <!-- Body -->
-      <tr>
-        <td style="background:#fff;padding:36px 40px;">
+              <!-- BODY -->
+              <tr>
+                <td style="background:#ffffff;padding:36px 40px;">
 
-          <p style="margin:0 0 14px;font-size:11px;font-weight:700;color:#999;letter-spacing:2px;text-transform:uppercase;">Informations du bien</p>
-          <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:28px;border-radius:10px;overflow:hidden;border:1px solid #f0f0f0;">
-            ${row('Type de bien', typeBien, true)}
-            ${row('Année de construction', anneeConstruction, false)}
-            ${row('Surface habitable', surface, true)}
-            ${row('Installation gaz', gaz, false)}
-          </table>
+                  <!-- Informations du bien -->
+                  <p style="margin:0 0 12px;font-size:10px;font-weight:700;color:#aaa;letter-spacing:2.5px;text-transform:uppercase;">
+                    Informations du bien
+                  </p>
+                  <table width="100%" cellpadding="0" cellspacing="0"
+                    style="border:1px solid #ebebeb;border-radius:12px;overflow:hidden;margin-bottom:28px;">
+                    <tr style="background:#f8f8f8;">
+                      <td style="padding:11px 16px;font-size:12px;color:#686a6f;font-weight:500;width:45%;border-bottom:1px solid #f0f0f0;">
+                        Type de bien
+                      </td>
+                      <td style="padding:11px 16px;font-size:13px;color:#222429;font-weight:600;border-bottom:1px solid #f0f0f0;">
+                        ${typeBien}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding:11px 16px;font-size:12px;color:#686a6f;font-weight:500;border-bottom:1px solid #f0f0f0;">
+                        Année de construction
+                      </td>
+                      <td style="padding:11px 16px;font-size:13px;color:#222429;font-weight:600;border-bottom:1px solid #f0f0f0;">
+                        ${anneeConstruction}
+                      </td>
+                    </tr>
+                    <tr style="background:#f8f8f8;">
+                      <td style="padding:11px 16px;font-size:12px;color:#686a6f;font-weight:500;border-bottom:1px solid #f0f0f0;">
+                        Surface habitable
+                      </td>
+                      <td style="padding:11px 16px;font-size:13px;color:#222429;font-weight:600;border-bottom:1px solid #f0f0f0;">
+                        ${surface}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding:11px 16px;font-size:12px;color:#686a6f;font-weight:500;">
+                        Installation gaz
+                      </td>
+                      <td style="padding:11px 16px;font-size:13px;color:#222429;font-weight:600;">
+                        ${gaz}
+                      </td>
+                    </tr>
+                  </table>
 
-          <p style="margin:0 0 14px;font-size:11px;font-weight:700;color:#999;letter-spacing:2px;text-transform:uppercase;">Coordonnées client</p>
-          <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:28px;border-radius:10px;overflow:hidden;border:1px solid #f0f0f0;">
-            ${row('Nom', nom, true)}
-            ${row('Email', email, false)}
-            ${row('Téléphone', tel, true)}
-            ${row('Adresse du bien', adresse, false)}
-          </table>
+                  <!-- Coordonnées client -->
+                  <p style="margin:0 0 12px;font-size:10px;font-weight:700;color:#aaa;letter-spacing:2.5px;text-transform:uppercase;">
+                    Coordonnées client
+                  </p>
+                  <table width="100%" cellpadding="0" cellspacing="0"
+                    style="border:1px solid #ebebeb;border-radius:12px;overflow:hidden;margin-bottom:28px;">
+                    <tr style="background:#f8f8f8;">
+                      <td style="padding:11px 16px;font-size:12px;color:#686a6f;font-weight:500;width:45%;border-bottom:1px solid #f0f0f0;">
+                        Nom complet
+                      </td>
+                      <td style="padding:11px 16px;font-size:13px;color:#222429;font-weight:600;border-bottom:1px solid #f0f0f0;">
+                        ${nom}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding:11px 16px;font-size:12px;color:#686a6f;font-weight:500;border-bottom:1px solid #f0f0f0;">
+                        Email
+                      </td>
+                      <td style="padding:11px 16px;font-size:13px;border-bottom:1px solid #f0f0f0;">
+                        <a href="mailto:${email}" style="color:#ffaa17;text-decoration:none;font-weight:600;">${email}</a>
+                      </td>
+                    </tr>
+                    <tr style="background:#f8f8f8;">
+                      <td style="padding:11px 16px;font-size:12px;color:#686a6f;font-weight:500;border-bottom:1px solid #f0f0f0;">
+                        Téléphone
+                      </td>
+                      <td style="padding:11px 16px;font-size:13px;color:#222429;font-weight:600;border-bottom:1px solid #f0f0f0;">
+                        <a href="tel:${tel}" style="color:#222429;text-decoration:none;">${tel}</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding:11px 16px;font-size:12px;color:#686a6f;font-weight:500;">
+                        Adresse du bien
+                      </td>
+                      <td style="padding:11px 16px;font-size:13px;color:#222429;font-weight:600;">
+                        ${adresse}
+                      </td>
+                    </tr>
+                  </table>
 
-          <a href="mailto:${email}" style="display:inline-block;background:#0a0a0a;color:#c8f135;font-size:13px;font-weight:700;text-decoration:none;padding:14px 28px;border-radius:10px;">
-            Répondre à ${nom} →
-          </a>
-        </td>
-      </tr>
+                  <!-- CTA réponse -->
+                  <a href="mailto:${email}"
+                    style="display:inline-block;background:#222429;color:#ffaa17;font-size:13px;
+                          font-weight:700;text-decoration:none;padding:14px 28px;border-radius:10px;
+                          letter-spacing:0.3px;">
+                    Répondre à ${nom} →
+                  </a>
 
-      <!-- Footer -->
-      <tr>
-        <td style="background:#f4f4f0;border-radius:0 0 16px 16px;padding:20px 40px;text-align:center;border-top:1px solid #e8e8e8;">
-          <p style="margin:0;font-size:11px;color:#aaa;">Meilleur Diag · Paris & Île-de-France · 07 82 32 64 51</p>
-        </td>
-      </tr>
+                </td>
+              </tr>
 
-    </table>
-  </td></tr>
-</table>
-</body>
-</html>`,
+              <!-- FOOTER -->
+              <tr>
+                <td style="background:#f5f5f5;border-radius:0 0 16px 16px;padding:22px 40px;
+                          text-align:center;border-top:1px solid #ebebeb;">
+                  <p style="margin:0;font-size:11px;color:#aaa;">
+                    Meilleur Diag · Paris & Île-de-France · 07 82 32 64 51
+                  </p>
+                  <p style="margin:4px 0 0;font-size:11px;color:#ccc;">
+                    Devis reçu via meilleur-diag.com
+                  </p>
+                </td>
+              </tr>
+
+            </table>
+          </td></tr>
+        </table>
+      </body>
+      </html>
+      `,
     })
 
     // — Auto-reply to client —
@@ -160,50 +245,144 @@ export async function sendDevisEmail( data: DevisPayload ): Promise<{ success: b
       from:    'Meilleur Diag <contact@meilleur-diag.com>',
       to:      [email],
       subject: 'Votre demande de devis a bien été reçue — Meilleur Diag',
+      // Auto-reply devis au client
       html: `
-<!DOCTYPE html>
-<html lang="fr">
-<head><meta charset="UTF-8"/></head>
-<body style="margin:0;padding:0;background:#f4f4f0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
-<table width="100%" cellpadding="0" cellspacing="0" style="background:#f4f4f0;padding:40px 16px;">
-  <tr><td align="center">
-    <table width="100%" style="max-width:560px;" cellpadding="0" cellspacing="0">
-      <tr>
-        <td style="background:#0a0a0a;border-radius:16px 16px 0 0;padding:32px 40px;text-align:center;">
-          <p style="margin:0;font-size:22px;font-weight:700;color:#fff;letter-spacing:-0.5px;">
-            Meilleur<span style="color:#c8f135;">Diag</span>
-          </p>
-        </td>
-      </tr>
-      <tr>
-        <td style="background:#fff;padding:40px;border-radius:0 0 16px 16px;">
-          <p style="margin:0 0 16px;font-size:18px;font-weight:700;color:#0a0a0a;">Bonjour ${nom},</p>
-          <p style="margin:0 0 20px;font-size:14px;color:#666;line-height:1.7;">
-            Nous avons bien reçu votre demande de devis pour un <strong style="color:#0a0a0a;">${pack}</strong>.
-            Notre équipe vous recontactera dans les plus brefs délais — généralement dans l'heure.
-          </p>
-          <div style="background:#f8f8f8;border-radius:10px;padding:18px 20px;margin-bottom:24px;">
-            <p style="margin:0 0 10px;font-size:11px;font-weight:700;color:#aaa;letter-spacing:2px;text-transform:uppercase;">Récapitulatif</p>
-            <p style="margin:4px 0;font-size:13px;color:#555;"><span style="color:#0a0a0a;font-weight:600;">Pack :</span> ${pack}</p>
-            <p style="margin:4px 0;font-size:13px;color:#555;"><span style="color:#0a0a0a;font-weight:600;">Type :</span> ${typeBien}</p>
-            <p style="margin:4px 0;font-size:13px;color:#555;"><span style="color:#0a0a0a;font-weight:600;">Surface :</span> ${surface}</p>
-          </div>
-          <p style="margin:0 0 6px;font-size:13px;color:#666;">En cas d'urgence, appelez-nous directement :</p>
-          <a href="tel:+33782326451" style="display:inline-block;background:#c8f135;color:#0a0a0a;font-size:14px;font-weight:700;text-decoration:none;padding:12px 24px;border-radius:8px;">
-            07 82 32 64 51
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td style="padding:20px 40px;text-align:center;">
-          <p style="margin:0;font-size:11px;color:#bbb;">Meilleur Diag · Paris & Île-de-France · meilleur-diag.com</p>
-        </td>
-      </tr>
-    </table>
-  </td></tr>
-</table>
-</body>
-</html>`,
+      <!DOCTYPE html>
+      <html lang="fr">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>Demande de devis reçue — Meilleur Diag</title>
+      </head>
+      <body style="margin:0;padding:0;background:#f5f5f5;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+        <table width="100%" cellpadding="0" cellspacing="0" style="background:#f5f5f5;padding:40px 16px;">
+          <tr><td align="center">
+            <table width="100%" style="max-width:560px;" cellpadding="0" cellspacing="0">
+
+              <!-- HEADER -->
+              <tr>
+                <td style="background:#222429;border-radius:16px 16px 0 0;padding:28px 40px;text-align:center;">
+                  <p style="margin:0;font-size:24px;font-weight:800;color:#ffffff;letter-spacing:-0.5px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+                    Meilleur<span style="color:#ffaa17;">Diag</span>
+                  </p>
+                  <p style="margin:6px 0 0;font-size:11px;color:rgba(255,255,255,0.35);letter-spacing:3px;text-transform:uppercase;">
+                    Diagnostic Immobilier · Paris & Île-de-France
+                  </p>
+                </td>
+              </tr>
+
+              <!-- BANDEAU CONFIRMATION -->
+              <tr>
+                <td style="background:#ffaa17;padding:14px 40px;">
+                  <p style="margin:0;font-size:10px;font-weight:700;color:#222429;letter-spacing:2.5px;text-transform:uppercase;">
+                    Demande bien reçue ✓
+                  </p>
+                  <p style="margin:5px 0 0;font-size:15px;font-weight:700;color:#222429;">
+                    Nous vous recontactons dans les plus brefs délais
+                  </p>
+                </td>
+              </tr>
+
+              <!-- BODY -->
+              <tr>
+                <td style="background:#ffffff;padding:36px 40px;">
+
+                  <p style="margin:0 0 8px;font-size:19px;font-weight:700;color:#222429;
+                            font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+                    Bonjour ${nom},
+                  </p>
+                  <p style="margin:0 0 24px;font-size:14px;color:#686a6f;line-height:1.75;">
+                    Votre demande de devis pour un
+                    <strong style="color:#222429;">${pack}</strong>
+                    a bien été reçue. Notre équipe vous recontactera très rapidement —
+                    généralement <strong style="color:#222429;">dans l'heure</strong>
+                    pendant nos horaires d'ouverture <strong style="color:#222429;">(7j/7, 8h–20h)</strong>.
+                  </p>
+
+                  <!-- Récapitulatif -->
+                  <div style="background:#fffdf7;border:1px solid #ffe0a0;border-radius:12px;
+                              padding:20px;margin-bottom:28px;">
+                    <p style="margin:0 0 14px;font-size:10px;font-weight:700;color:#e09200;
+                              letter-spacing:2.5px;text-transform:uppercase;">
+                      Récapitulatif de votre demande
+                    </p>
+                    <table cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td style="padding:5px 0;font-size:13px;color:#686a6f;width:120px;">Pack demandé</td>
+                        <td style="padding:5px 0;font-size:13px;color:#222429;font-weight:600;">${pack}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px 0;font-size:13px;color:#686a6f;">Type de bien</td>
+                        <td style="padding:5px 0;font-size:13px;color:#222429;font-weight:600;">${typeBien}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px 0;font-size:13px;color:#686a6f;">Surface</td>
+                        <td style="padding:5px 0;font-size:13px;color:#222429;font-weight:600;">${surface}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:5px 0;font-size:13px;color:#686a6f;">Construction</td>
+                        <td style="padding:5px 0;font-size:13px;color:#222429;font-weight:600;">${anneeConstruction}</td>
+                      </tr>
+                    </table>
+                  </div>
+
+                  <!-- Garanties -->
+                  <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:28px;">
+                    <tr>
+                      <td style="padding:8px 12px;background:#f8f8f8;border-radius:8px;
+                                  font-size:12px;color:#686a6f;text-align:center;width:30%;">
+                        ⚡ Rapport<br/><strong style="color:#222429;">en 24h</strong>
+                      </td>
+                      <td style="width:8px;"></td>
+                      <td style="padding:8px 12px;background:#f8f8f8;border-radius:8px;
+                                  font-size:12px;color:#686a6f;text-align:center;width:30%;">
+                        🛡️ Certifiés<br/><strong style="color:#222429;">COFRAC</strong>
+                      </td>
+                      <td style="width:8px;"></td>
+                      <td style="padding:8px 12px;background:#f8f8f8;border-radius:8px;
+                                  font-size:12px;color:#686a6f;text-align:center;width:30%;">
+                        📅 Intervention<br/><strong style="color:#222429;">7j/7</strong>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <!-- Séparateur -->
+                  <div style="height:1px;background:#f0f0f0;margin-bottom:24px;"></div>
+
+                  <p style="margin:0 0 10px;font-size:13px;color:#686a6f;">
+                    Besoin d'une réponse urgente ? Appelez-nous directement :
+                  </p>
+                  <a href="tel:+33782326451"
+                    style="display:inline-block;background:#ffaa17;color:#222429;font-size:14px;
+                          font-weight:700;text-decoration:none;padding:13px 26px;border-radius:10px;">
+                    07 82 32 64 51
+                  </a>
+
+                </td>
+              </tr>
+
+              <!-- FOOTER -->
+              <tr>
+                <td style="background:#f5f5f5;border-radius:0 0 16px 16px;padding:22px 40px;
+                          text-align:center;border-top:1px solid #ebebeb;">
+                  <p style="margin:0;font-size:11px;color:#aaa;">
+                    Meilleur Diag · Paris & Île-de-France
+                  </p>
+                  <p style="margin:4px 0 0;font-size:11px;color:#ccc;">
+                    <a href="https://meilleur-diag.com" style="color:#ccc;text-decoration:none;">
+                      meilleur-diag.com
+                    </a>
+                    · contact@meilleur-diag.com · 07 82 32 64 51
+                  </p>
+                </td>
+              </tr>
+
+            </table>
+          </td></tr>
+        </table>
+      </body>
+      </html>
+      `,
     })
 
     return { success: true }

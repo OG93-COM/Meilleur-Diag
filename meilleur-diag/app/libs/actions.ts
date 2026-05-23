@@ -75,122 +75,126 @@ export async function sendContactEmail(
   // 6. Send via Resend
   try {
     await resend.emails.send({
-      from:    'Meilleur Diag <contact@meilleur-diag.com>',
+      from:    'Meilleur Diag <noreply@meilleur-diag.com>',
       to:      ['contact@meilleur-diag.com'],
       replyTo: email,
       subject: `[Contact] ${sujet} — ${nom}`,
+      // Email interne (notification à l'équipe)
       html: `
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nouveau message — Meilleur Diag</title>
-</head>
-<body style="margin:0;padding:0;background:#f4f4f0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+      <!DOCTYPE html>
+      <html lang="fr">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>Nouveau message — Meilleur Diag</title>
+      </head>
+      <body style="margin:0;padding:0;background:#f5f5f5;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+        <table width="100%" cellpadding="0" cellspacing="0" style="background:#f5f5f5;padding:40px 16px;">
+          <tr><td align="center">
+            <table width="100%" style="max-width:600px;" cellpadding="0" cellspacing="0">
 
-  <!-- Wrapper -->
-  <table width="100%" cellpadding="0" cellspacing="0" style="background:#f4f4f0;padding:40px 16px;">
-    <tr><td align="center">
-      <table width="100%" style="max-width:600px;" cellpadding="0" cellspacing="0">
-
-        <!-- Header -->
-        <tr>
-          <td style="background:#0a0a0a;border-radius:16px 16px 0 0;padding:32px 40px;text-align:center;">
-            <p style="margin:0;font-size:22px;font-weight:700;color:#ffffff;letter-spacing:-0.5px;">
-              Meilleur<span style="color:#c8f135;">Diag</span>
-            </p>
-            <p style="margin:6px 0 0;font-size:12px;color:rgba(255,255,255,0.4);letter-spacing:2px;text-transform:uppercase;">
-              Diagnostic Immobilier
-            </p>
-          </td>
-        </tr>
-
-        <!-- Subject banner -->
-        <tr>
-          <td style="background:#c8f135;padding:14px 40px;">
-            <p style="margin:0;font-size:11px;font-weight:700;color:#0a0a0a;letter-spacing:2px;text-transform:uppercase;">
-              Nouveau message reçu
-            </p>
-            <p style="margin:4px 0 0;font-size:17px;font-weight:700;color:#0a0a0a;">
-              ${sujet}
-            </p>
-          </td>
-        </tr>
-
-        <!-- Body -->
-        <tr>
-          <td style="background:#ffffff;padding:36px 40px;">
-
-            <!-- Sender info -->
-            <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:28px;">
+              <!-- HEADER -->
               <tr>
-                <td style="background:#f8f8f8;border-radius:12px;padding:20px 24px;">
-                  <p style="margin:0 0 12px;font-size:11px;font-weight:700;color:#999;letter-spacing:2px;text-transform:uppercase;">
+                <td style="background:#222429;border-radius:16px 16px 0 0;padding:28px 40px;text-align:center;">
+                  <p style="margin:0;font-size:24px;font-weight:800;color:#ffffff;letter-spacing:-0.5px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+                    Meilleur<span style="color:#ffaa17;">Diag</span>
+                  </p>
+                  <p style="margin:6px 0 0;font-size:11px;color:rgba(255,255,255,0.35);letter-spacing:3px;text-transform:uppercase;">
+                    Diagnostic Immobilier · Paris & Île-de-France
+                  </p>
+                </td>
+              </tr>
+
+              <!-- BANDEAU SUJET -->
+              <tr>
+                <td style="background:#ffaa17;padding:14px 40px;">
+                  <p style="margin:0;font-size:10px;font-weight:700;color:#222429;letter-spacing:2.5px;text-transform:uppercase;">
+                    Nouveau message reçu
+                  </p>
+                  <p style="margin:5px 0 0;font-size:17px;font-weight:700;color:#222429;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+                    ${sujet}
+                  </p>
+                </td>
+              </tr>
+
+              <!-- BODY -->
+              <tr>
+                <td style="background:#ffffff;padding:36px 40px;">
+
+                  <!-- Expéditeur -->
+                  <p style="margin:0 0 12px;font-size:10px;font-weight:700;color:#aaa;letter-spacing:2.5px;text-transform:uppercase;">
                     Expéditeur
                   </p>
-                  <table cellpadding="0" cellspacing="0">
-                    <tr>
-                      <td style="padding:4px 0;">
-                        <span style="font-size:13px;color:#aaa;min-width:60px;display:inline-block;">Nom</span>
-                        <span style="font-size:13px;font-weight:600;color:#0a0a0a;">${nom}</span>
+                  <table width="100%" cellpadding="0" cellspacing="0"
+                    style="border:1px solid #ebebeb;border-radius:12px;overflow:hidden;margin-bottom:28px;">
+                    <tr style="background:#f8f8f8;">
+                      <td style="padding:11px 16px;font-size:12px;color:#686a6f;font-weight:500;width:90px;border-bottom:1px solid #f0f0f0;">
+                        Nom
+                      </td>
+                      <td style="padding:11px 16px;font-size:13px;color:#222429;font-weight:600;border-bottom:1px solid #f0f0f0;">
+                        ${nom}
                       </td>
                     </tr>
                     <tr>
-                      <td style="padding:4px 0;">
-                        <span style="font-size:13px;color:#aaa;min-width:60px;display:inline-block;">Email</span>
-                        <a href="mailto:${email}" style="font-size:13px;font-weight:600;color:#5b8f00;text-decoration:none;">${email}</a>
+                      <td style="padding:11px 16px;font-size:12px;color:#686a6f;font-weight:500;border-bottom:1px solid #f0f0f0;">
+                        Email
+                      </td>
+                      <td style="padding:11px 16px;font-size:13px;border-bottom:1px solid #f0f0f0;">
+                        <a href="mailto:${email}"
+                          style="color:#ffaa17;text-decoration:none;font-weight:600;">${email}</a>
                       </td>
                     </tr>
                     ${tel ? `
-                    <tr>
-                      <td style="padding:4px 0;">
-                        <span style="font-size:13px;color:#aaa;min-width:60px;display:inline-block;">Tél</span>
-                        <a href="tel:${tel}" style="font-size:13px;font-weight:600;color:#0a0a0a;text-decoration:none;">${tel}</a>
+                    <tr style="background:#f8f8f8;">
+                      <td style="padding:11px 16px;font-size:12px;color:#686a6f;font-weight:500;">
+                        Téléphone
+                      </td>
+                      <td style="padding:11px 16px;font-size:13px;color:#222429;font-weight:600;">
+                        <a href="tel:${tel}" style="color:#222429;text-decoration:none;">${tel}</a>
                       </td>
                     </tr>` : ''}
                   </table>
+
+                  <!-- Message -->
+                  <p style="margin:0 0 12px;font-size:10px;font-weight:700;color:#aaa;letter-spacing:2.5px;text-transform:uppercase;">
+                    Message
+                  </p>
+                  <div style="border-left:3px solid #ffaa17;padding:16px 20px;background:#fffdf7;border-radius:0 10px 10px 0;">
+                    <p style="margin:0;font-size:14px;color:#444;line-height:1.75;white-space:pre-wrap;">${message}</p>
+                  </div>
+
                 </td>
               </tr>
+
+              <!-- CTA -->
+              <tr>
+                <td style="background:#ffffff;padding:0 40px 36px;">
+                  <a href="mailto:${email}"
+                    style="display:inline-block;background:#222429;color:#ffaa17;font-size:13px;font-weight:700;
+                          text-decoration:none;padding:14px 28px;border-radius:10px;letter-spacing:0.3px;">
+                    Répondre à ${nom} →
+                  </a>
+                </td>
+              </tr>
+
+              <!-- FOOTER -->
+              <tr>
+                <td style="background:#f5f5f5;border-radius:0 0 16px 16px;padding:22px 40px;
+                          text-align:center;border-top:1px solid #ebebeb;">
+                  <p style="margin:0;font-size:11px;color:#aaa;">
+                    Meilleur Diag · Paris & Île-de-France · 07 82 32 64 51
+                  </p>
+                  <p style="margin:4px 0 0;font-size:11px;color:#ccc;">
+                    Message reçu via le formulaire de contact · meilleur-diag.com
+                  </p>
+                </td>
+              </tr>
+
             </table>
-
-            <!-- Message -->
-            <p style="margin:0 0 10px;font-size:11px;font-weight:700;color:#999;letter-spacing:2px;text-transform:uppercase;">
-              Message
-            </p>
-            <div style="border-left:3px solid #c8f135;padding:16px 20px;background:#fafafa;border-radius:0 8px 8px 0;">
-              <p style="margin:0;font-size:14px;color:#333;line-height:1.7;white-space:pre-wrap;">${message}</p>
-            </div>
-
-          </td>
-        </tr>
-
-        <!-- CTA -->
-        <tr>
-          <td style="background:#ffffff;padding:0 40px 36px;">
-            <a href="mailto:${email}" style="display:inline-block;background:#0a0a0a;color:#c8f135;font-size:13px;font-weight:700;text-decoration:none;padding:14px 28px;border-radius:10px;letter-spacing:0.5px;">
-              Répondre à ${nom} →
-            </a>
-          </td>
-        </tr>
-
-        <!-- Footer -->
-        <tr>
-          <td style="background:#f4f4f0;border-radius:0 0 16px 16px;padding:24px 40px;text-align:center;border-top:1px solid #e8e8e8;">
-            <p style="margin:0;font-size:11px;color:#aaa;">
-              Meilleur Diag · Paris & Île-de-France · 07 82 32 64 51
-            </p>
-            <p style="margin:4px 0 0;font-size:11px;color:#ccc;">
-              Message envoyé depuis le formulaire de contact sur meilleur-diag.com
-            </p>
-          </td>
-        </tr>
-
-      </table>
-    </td></tr>
-  </table>
-</body>
-</html>
+          </td></tr>
+        </table>
+      </body>
+      </html>
       `,
     })
 
@@ -199,52 +203,108 @@ export async function sendContactEmail(
       from:    'Meilleur Diag <contact@meilleur-diag.com>',
       to:      [email],
       subject: 'Votre message a bien été reçu — Meilleur Diag',
+      // Auto-reply au client
       html: `
-<!DOCTYPE html>
-<html lang="fr">
-<head><meta charset="UTF-8"/></head>
-<body style="margin:0;padding:0;background:#f4f4f0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
-  <table width="100%" cellpadding="0" cellspacing="0" style="background:#f4f4f0;padding:40px 16px;">
-    <tr><td align="center">
-      <table width="100%" style="max-width:560px;" cellpadding="0" cellspacing="0">
-        <tr>
-          <td style="background:#0a0a0a;border-radius:16px 16px 0 0;padding:32px 40px;text-align:center;">
-            <p style="margin:0;font-size:22px;font-weight:700;color:#fff;letter-spacing:-0.5px;">
-              Meilleur<span style="color:#c8f135;">Diag</span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td style="background:#ffffff;padding:40px;border-radius:0 0 16px 16px;">
-            <p style="margin:0 0 8px;font-size:20px;font-weight:700;color:#0a0a0a;">
-              Bonjour ${nom},
-            </p>
-            <p style="margin:0 0 20px;font-size:14px;color:#666;line-height:1.7;">
-              Nous avons bien reçu votre message concernant <strong style="color:#0a0a0a;">${sujet}</strong>.
-              Notre équipe vous répondra dans les plus brefs délais, généralement dans l'heure pendant nos heures d'ouverture.
-            </p>
-            <div style="background:#f8f8f8;border-radius:10px;padding:16px 20px;margin-bottom:24px;">
-              <p style="margin:0;font-size:12px;color:#aaa;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;">Votre message</p>
-              <p style="margin:0;font-size:13px;color:#555;line-height:1.6;white-space:pre-wrap;">${message.slice(0, 300)}${message.length > 300 ? '…' : ''}</p>
-            </div>
-            <p style="margin:0 0 6px;font-size:13px;color:#666;">
-              En cas d'urgence, n'hésitez pas à nous appeler directement :
-            </p>
-            <a href="tel:+33782326451" style="display:inline-block;background:#c8f135;color:#0a0a0a;font-size:14px;font-weight:700;text-decoration:none;padding:12px 24px;border-radius:8px;">
-              07 82 32 64 51
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td style="padding:20px 40px;text-align:center;">
-            <p style="margin:0;font-size:11px;color:#bbb;">Meilleur Diag · Paris & Île-de-France · meilleur-diag.com</p>
-          </td>
-        </tr>
-      </table>
-    </td></tr>
-  </table>
-</body>
-</html>
+      <!DOCTYPE html>
+      <html lang="fr">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>Message reçu — Meilleur Diag</title>
+      </head>
+      <body style="margin:0;padding:0;background:#f5f5f5;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+        <table width="100%" cellpadding="0" cellspacing="0" style="background:#f5f5f5;padding:40px 16px;">
+          <tr><td align="center">
+            <table width="100%" style="max-width:560px;" cellpadding="0" cellspacing="0">
+
+              <!-- HEADER -->
+              <tr>
+                <td style="background:#222429;border-radius:16px 16px 0 0;padding:28px 40px;text-align:center;">
+                  <p style="margin:0;font-size:24px;font-weight:800;color:#ffffff;letter-spacing:-0.5px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+                    Meilleur<span style="color:#ffaa17;">Diag</span>
+                  </p>
+                  <p style="margin:6px 0 0;font-size:11px;color:rgba(255,255,255,0.35);letter-spacing:3px;text-transform:uppercase;">
+                    Diagnostic Immobilier · Paris & Île-de-France
+                  </p>
+                </td>
+              </tr>
+
+              <!-- CONFIRMATION BANDEAU -->
+              <tr>
+                <td style="background:#ffaa17;padding:14px 40px;">
+                  <p style="margin:0;font-size:10px;font-weight:700;color:#222429;letter-spacing:2.5px;text-transform:uppercase;">
+                    Message bien reçu ✓
+                  </p>
+                  <p style="margin:5px 0 0;font-size:15px;font-weight:700;color:#222429;">
+                    Nous reviendrons vers vous très rapidement
+                  </p>
+                </td>
+              </tr>
+
+              <!-- BODY -->
+              <tr>
+                <td style="background:#ffffff;padding:36px 40px;">
+
+                  <p style="margin:0 0 6px;font-size:19px;font-weight:700;color:#222429;
+                            font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+                    Bonjour ${nom},
+                  </p>
+                  <p style="margin:0 0 24px;font-size:14px;color:#686a6f;line-height:1.75;">
+                    Nous avons bien reçu votre message concernant
+                    <strong style="color:#222429;">${sujet}</strong>.
+                    Notre équipe vous répondra dans les plus brefs délais —
+                    généralement dans l'heure pendant nos heures d'ouverture
+                    <strong style="color:#222429;">(7j/7, 8h–20h)</strong>.
+                  </p>
+
+                  <!-- Récap message -->
+                  <div style="background:#fffdf7;border:1px solid #ffe0a0;border-radius:12px;
+                              padding:18px 20px;margin-bottom:28px;">
+                    <p style="margin:0 0 10px;font-size:10px;font-weight:700;color:#e09200;
+                              letter-spacing:2.5px;text-transform:uppercase;">
+                      Votre message
+                    </p>
+                    <p style="margin:0;font-size:13px;color:#555;line-height:1.7;white-space:pre-wrap;">
+                      ${message.slice(0, 300)}${message.length > 300 ? '…' : ''}
+                    </p>
+                  </div>
+
+                  <!-- Séparateur -->
+                  <div style="height:1px;background:#f0f0f0;margin-bottom:24px;"></div>
+
+                  <p style="margin:0 0 10px;font-size:13px;color:#686a6f;">
+                    Besoin d'une réponse urgente ? Appelez-nous directement :
+                  </p>
+                  <a href="tel:+33782326451"
+                    style="display:inline-block;background:#ffaa17;color:#222429;font-size:14px;
+                          font-weight:700;text-decoration:none;padding:13px 26px;border-radius:10px;">
+                    07 82 32 64 51
+                  </a>
+
+                </td>
+              </tr>
+
+              <!-- FOOTER -->
+              <tr>
+                <td style="background:#f5f5f5;border-radius:0 0 16px 16px;padding:22px 40px;
+                          text-align:center;border-top:1px solid #ebebeb;">
+                  <p style="margin:0;font-size:11px;color:#aaa;">
+                    Meilleur Diag · Paris & Île-de-France
+                  </p>
+                  <p style="margin:4px 0 0;font-size:11px;color:#ccc;">
+                    <a href="https://meilleur-diag.com" style="color:#ccc;text-decoration:none;">
+                      meilleur-diag.com
+                    </a>
+                    · contact@meilleur-diag.com
+                  </p>
+                </td>
+              </tr>
+
+            </table>
+          </td></tr>
+        </table>
+      </body>
+      </html>
       `,
     })
 
