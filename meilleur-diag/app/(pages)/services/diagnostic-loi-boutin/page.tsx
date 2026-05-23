@@ -276,7 +276,7 @@ export default function DiagnosticLoiBoutinPage() {
                     <p className="text-white/50 text-sm">Intervention 7j/7 — Rapport en 24h — Devis gratuit</p>
                   </div>
                   <div className="flex gap-3 shrink-0">
-                    <Link href="/devis" className="btn-primary px-5 py-3 rounded-xl text-sm">Devis gratuit <ArrowRight size={15} /></Link>
+                    <Link href="/devis-diagnostic-immobilier" className="btn-primary px-5 py-3 rounded-xl text-sm">Devis gratuit <ArrowRight size={15} /></Link>
                     <a href="tel:+33782326451" className="inline-flex items-center gap-2 border border-white/15 text-white font-semibold px-5 py-3 rounded-xl text-sm hover:bg-white/5 transition-colors">
                       <Phone size={15} /> 07 82 32 64 51
                     </a>
@@ -300,7 +300,7 @@ export default function DiagnosticLoiBoutinPage() {
                 <div className="bg-black rounded-2xl p-6">
                   <h3 className="font-bold text-white text-sm mb-1" style={{ fontFamily: 'Syne, system-ui' }}>Intervention rapide</h3>
                   <p className="text-white/40 text-xs mb-5">Paris & Île-de-France — 7j/7</p>
-                  <Link href="/devis" className="btn-primary w-full justify-center rounded-xl py-3 text-sm mb-3">Devis gratuit en ligne <ArrowRight size={14} /></Link>
+                  <Link href="/devis-diagnostic-immobilier" className="btn-primary w-full justify-center rounded-xl py-3 text-sm mb-3">Devis gratuit en ligne <ArrowRight size={14} /></Link>
                   <a href="tel:+33782326451" className="flex items-center justify-center gap-2 w-full border border-white/10 text-white/70 hover:text-white text-sm font-medium py-3 rounded-xl hover:bg-white/5 transition-colors">
                     <Phone size={14} /> 07 82 32 64 51
                   </a>
