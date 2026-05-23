@@ -40,8 +40,8 @@ export default function Navbar() {
 
   return (
     <>
-      <header className={`fixed top-0 left-0 right-0 z-30 transition-all duration-300  mb-20
-        ${scrolled ? 'bg-black/85 backdrop-blur-md nav-scrolled py-3 border-b border-black/5' : 'py-5'}`}>
+      <header className={`fixed top-0 left-0 right-0 z-30 transition-all duration-300 mb-20
+        ${scrolled ? 'bg-black/85 backdrop-blur-md nav-scrolled border-b py-5 border-black/5' : 'py-5'}`}>
         <div className="container-custom">
           <div className="flex items-center justify-between gap-6">
             {/* Logo */}

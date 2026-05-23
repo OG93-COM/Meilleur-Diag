@@ -1,9 +1,8 @@
-"use client"
 
 import Link from 'next/link'
-import { Phone, Mail, MapPin, ArrowRight, CalendarClock } from 'lucide-react'
+import { Phone, Mail, MapPin } from 'lucide-react'
 import Image from 'next/image'
-import { FacebookLogoIcon, InstagramLogoIcon, LinkedinLogoIcon } from '@phosphor-icons/react'
+import FooterSocial from './FooterSocial'
 
 const services = [
   { label: 'DPE (Performance Énergétique)', href: '/services/diagnostic-performance-energetique' },
@@ -45,20 +44,7 @@ export default function Footer() {
             <p className="text-white/50 text-sm leading-relaxed mb-5 text-center">
               Votre expert en diagnostic immobilier à Paris et Île-de-France. Diagnostiqueurs certifiés, tarifs transparents, résultats rapides.
             </p>
-            <div className="flex gap-3">
-              <Link href="https://www.facebook.com/MeilleurDiagParis" target="_blank" rel="noopener noreferrer"
-                className="w-9 h-9 rounded-lg bg-white/5 hover:bg-primary/20 flex items-center justify-center transition-colors" aria-label="Facebook">
-                <FacebookLogoIcon size={20} className="text-white/60 hover:text-primary" />
-              </Link>
-              <Link href="https://www.linkedin.com/company/meilleur-diag" target="_blank" rel="noopener noreferrer"
-                className="w-9 h-9 rounded-lg bg-white/5 hover:bg-primary/20 flex items-center justify-center transition-colors" aria-label="LinkedIn">
-                <LinkedinLogoIcon size={20} className="text-white/60 hover:text-primary" />
-              </Link>
-              <Link href="https://www.instagram.com/meilleur.diag/" target="_blank" rel="noopener noreferrer"
-                className="w-9 h-9 rounded-lg bg-white/5 hover:bg-primary/20 flex items-center justify-center transition-colors" aria-label="Instagram">
-                <InstagramLogoIcon size={20} className="text-white/60 hover:text-primary" />
-              </Link>
-            </div>
+            <FooterSocial/>
           </div>
 
           {/* Services */}
@@ -73,7 +59,7 @@ export default function Footer() {
                     href={item.href}
                     className="text-white/50 hover:text-primary text-sm transition-colors flex items-center gap-1.5"
                   >
-                    <span className="w-1 h-1 rounded-full bg-primary/40 flex-shrink-0" />
+                    <span className="w-1 h-1 rounded-full bg-primary/40 shrink-0" />
                     {item.label}
                   </Link>
                 </li>

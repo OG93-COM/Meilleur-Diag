@@ -1,5 +1,4 @@
 'use client'
-import { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { ArrowRight, Phone, Shield, Clock, FileText, ShieldCheck } from 'lucide-react'
 import Image from 'next/image'
@@ -11,19 +10,8 @@ const badges = [
 ]
 
 export default function Hero() {
-  const titleRef = useRef<HTMLHeadingElement>(null)
 
-  useEffect(() => {
-    const el = titleRef.current
-    if (!el) return
-    el.style.opacity = '0'
-    el.style.transform = 'translateY(20px)'
-    setTimeout(() => {
-      el.style.transition = 'opacity 0.7s ease, transform 0.7s ease'
-      el.style.opacity = '1'
-      el.style.transform = 'translateY(0)'
-    }, 100)
-  }, [])
+
 
   return (
     <section className="relative min-h-screen bg-black flex items-center overflow-hidden">
@@ -47,9 +35,7 @@ export default function Hero() {
             Diagnostiqueurs certifiés • Paris & Île-de-France
           </div>
 
-            <h1 ref={titleRef} className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] mb-6"
-              style={{ fontFamily: 'Syne, system-ui, sans-serif' }} >
-              Diagnostic
+            <h1 className=" text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] mb-6 animate-fade-up" >              Diagnostic
               <br />
               <span style={{ color: 'var(--color-primary)' }}>Immobilier</span>
               <br />
@@ -120,12 +106,6 @@ export default function Hero() {
                   ))}
                 </div>
 
-                {/* <div className="pt-4" style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}>
-                  <p className="text-white/40 text-xs mb-1">Rapport disponible en</p>
-                  <p className="text-white font-bold text-lg" style={{ fontFamily: 'Syne, system-ui' }}>
-                    Moins de <span style={{ color: 'var(--color-primary)' }}>24h</span>
-                  </p>
-                </div> */}
                 <Image src={"/images/diagnostic-immobilier-dpe.png"} width={200} height={200} alt='diagnostic dpe schema' className='absolute -bottom-30 right-14'/>
               </div>
 

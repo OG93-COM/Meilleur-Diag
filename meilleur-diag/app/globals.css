@@ -1,6 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
 
 @import "tailwindcss";
+
+:root {
+  --font-heading: var(--font-syne), system-ui, sans-serif;
+  --font-body:    var(--font-inter), system-ui, sans-serif;
+}
 
 @theme {
   --color-primary: #ffaa17;
@@ -15,7 +19,7 @@
   html { scroll-behavior: smooth; }
 
   body {
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: var(--font-body);
     color: var(--color-mygray);
     background: #fff;
     -webkit-font-smoothing: antialiased;
@@ -116,4 +120,20 @@
 
 .animate-shine {
   animation: shine 2.5s linear infinite;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0,20px,0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp .7s ease forwards;
 }
