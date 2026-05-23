@@ -1,4 +1,4 @@
-'use client'
+
 import Link from 'next/link'
 import { ArrowRight, Phone, Shield, Clock, FileText, ShieldCheck } from 'lucide-react'
 import Image from 'next/image'
@@ -15,22 +15,17 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen bg-black flex items-center overflow-hidden">
-      <Image
-        src="/images/bg-diacnostic-immobilier-paris.jpg"
-        alt="Diagnostic immobilier Paris Île-de-France"
-        fill
-        priority
-        className="object-cover object-center opacity-5"
-      />
+      <Image src="/images/bg-diacnostic-immobilier-paris.jpg" alt="Diagnostic immobilier Paris Île-de-France"
+        fill priority quality={50} sizes="100vw" draggable={false} className="object-cover object-center opacity-5"  />
       {/* Glow orbs */}
-      <div className="absolute top-1/4 right-1/4 w-80 h-80 rounded-full pointer-events-none bg-[radial-gradient(circle,rgba(255,170,23,0.12)_0%,transparent_70%)] animate-pulse" />
-        <div className="absolute bottom-1/3 left-1/4 w-60 h-60 rounded-full pointer-events-none bg-[radial-gradient(circle,rgba(255,170,23,0.07)_0%,transparent_90%)] animate-pulse" />
+      <div className="absolute top-1/4 right-1/4 w-80 h-80 rounded-full pointer-events-none bg-[radial-gradient(circle,rgba(255,170,23,0.12)_0%,transparent_70%)]" />
+        <div className="absolute bottom-1/3 left-1/4 w-60 h-60 rounded-full pointer-events-none bg-[radial-gradient(circle,rgba(255,170,23,0.07)_0%,transparent_90%)]" />
 
       <div className="container-custom relative z-10 py-32">
         <div className="grid lg:grid-cols-2 gap-14 items-center">
           {/* Left — text */}
           <div>
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-white animate-pulse bg-white/0 border border-white/15 backdrop-blur-md text-xs tracking-wide mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-white bg-white/0 border border-white/15 backdrop-blur-md text-xs tracking-wide mb-6">
             <ShieldCheck size={14} className="text-primary" />
             Diagnostiqueurs certifiés • Paris & Île-de-France
           </div>
@@ -106,18 +101,15 @@ export default function Hero() {
                   ))}
                 </div>
 
-                <Image src={"/images/diagnostic-immobilier-dpe.png"} width={200} height={200} alt='diagnostic dpe schema' className='absolute -bottom-30 right-14'/>
               </div>
+              <div className="relative w-full" style={{ height: 0 }} aria-hidden="true">
+                  <Image src="/images/diagnostic-immobilier-dpe.png" width={200} height={200} alt="Schéma diagnostic DPE" loading="lazy" draggable={false}
+                    style={{ position: 'absolute', bottom: '-120px', right: '56px', }} />
+                </div>
 
               {/* Floating mini badge */}
-              <div
-                className="absolute -top-4 -right-4 rounded-2xl px-4 py-3 text-center"
-                style={{
-                  background: 'var(--color-primary)',
-                  animation: 'float 3s ease-in-out infinite 1s',
-                }}
-              >
-                <p className="text-black font-bold text-lg leading-none" style={{ fontFamily: 'Syne, system-ui' }}>7j/7</p>
+              <div className="absolute -top-4 -right-4 rounded-2xl px-4 py-3 text-center bg-primary">
+                <p className="text-black font-bold text-lg leading-none" style={{ fontFamily: 'var(--font-syne), system-ui' }}>7j/7</p>
                 <p className="text-black/70 text-[10px] font-medium">Intervention</p>
               </div>
 

@@ -146,12 +146,12 @@ export default function Services() {
 
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="inline-block text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4 bg-[#ffaa17]/10 text-[#e09200]">
+          <span className="inline-block text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4 bg-primary/10 text-secondary">
             Nos prestations
           </span>
           <h2 className="section-title mb-4">
             Tous vos diagnostics<br />
-            <span className="text-[#ffaa17]">en un seul endroit</span>
+            <span className="text-primary">en un seul endroit</span>
           </h2>
           <p className="text-base leading-relaxed text-mygray">
             Nos diagnostiqueurs certifiés prennent en charge l'ensemble des diagnostics
@@ -170,12 +170,19 @@ export default function Services() {
             >
               {/* Top row — circle icon + arrow */}
             
-                {/* Circle logo 60x60 */}
-                  <Image src={service.icon} width={100} height={100} className="object-cover mb-1" alt={service.title}/>
+              <div className="w-25 h-25 flex items-center justify-center mb-2">
+                <Image
+                  src={service.icon}
+                  width={100}
+                  height={100}
+                  alt={service.title}
+                  className="w-full h-full object-contain"
+                />
+              </div>
 
 
               {/* Title */}
-              <h3 className="font-bold text-[15px] text-[#222429] mb-0.5 group-hover:text-primary transition-colors duration-200"
+              <h3 className="font-bold text-[15px] text-black mb-0.5 group-hover:text-primary transition-colors duration-200"
                 style={{ fontFamily: 'Syne, system-ui' }} >
                 {service.title}
               </h3>
@@ -186,7 +193,7 @@ export default function Services() {
               </p>
 
               {/* Divider */}
-              <div className="w-8 h-px bg-[#e8e8e8] mb-3 group-hover:w-12 group-hover:bg-[#ffaa17] transition-all duration-300" />
+              <div className="w-8 h-px bg-[#e8e8e8] mb-3 group-hover:w-12 group-hover:bg-primary transition-all duration-300" />
 
               {/* Desc */}
               <p className="text-[13px] leading-relaxed text-mygray flex-1 mb-4">
@@ -209,10 +216,10 @@ export default function Services() {
           ))}
 
           {/* CTA Card — Pack complet */}
-          <div className="svc-card animate-on-scroll rounded-2xl p-5 flex flex-col bg-[#222429] border border-[#2e3139]">
+          <div className="svc-card animate-on-scroll rounded-2xl p-5 flex flex-col bg-black border border-[#2e3139]">
             {/* Top */}
             <div className="flex items-start justify-between mb-5">
-              <div className="w-[60px] h-[60px] rounded-full bg-[#ffaa17]/15 flex items-center justify-center text-3xl flex-shrink-0">
+              <div className="w-15 h-15 rounded-full bg-primary/15 flex items-center justify-center text-3xl shrink-0">
                 📋
               </div>
             </div>
@@ -233,7 +240,7 @@ export default function Services() {
               Tous vos diagnostics regroupés en une seule intervention. Pratique, économique, et livré en moins de 24h.
             </p>
 
-            <Link href="/devis-diagnostic-immobilier" className="w-full inline-flex items-center justify-center gap-2 bg-[#ffaa17] text-[#222429] font-bold text-sm px-4 py-3 rounded-xl hover:bg-[#e09200] transition-colors duration-200"
+            <Link href="/devis-diagnostic-immobilier" className="w-full inline-flex items-center justify-center gap-2 bg-primary text-black font-bold text-sm px-4 py-3 rounded-xl hover:bg-secondary transition-colors duration-200"
               style={{ fontFamily: 'Syne, system-ui' }} >
                 Obtenir un devis
               <ArrowRight size={15} />

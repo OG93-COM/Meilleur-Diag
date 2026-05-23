@@ -39,7 +39,8 @@ export default function Footer() {
           {/* Brand */}
           <div className='flex flex-col items-center justify-center'>
             <div className="flex items-center justify-center gap-2 mb-5">
-            <Image src={"/images/logo.png"} width={200} height={150} alt='logo'/>
+            <Image src="/images/logo.png" width={160} height={120} alt="Meilleur Diag — Diagnostic Immobilier Paris"
+                loading="lazy" quality={35} draggable={false} style={{ width: '160px', height: 'auto' }}/>
             </div>
             <p className="text-white/50 text-sm leading-relaxed mb-5 text-center">
               Votre expert en diagnostic immobilier à Paris et Île-de-France. Diagnostiqueurs certifiés, tarifs transparents, résultats rapides.

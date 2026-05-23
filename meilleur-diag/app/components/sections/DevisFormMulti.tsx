@@ -371,7 +371,7 @@ export default function DevisFormMulti() {
                       </label>
                       <div className="relative">
                         <User size={15} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#aaa]" />
-                        <input type="text" placeholder="Jean Dupont" value={form.nom}
+                        <input type="text" placeholder="Nom et prenom" value={form.nom}
                           onChange={e => set('nom', e.target.value)}
                           className="w-full pl-10 pr-4 py-3 rounded-xl border border-[#ebebeb] text-sm text-black placeholder:text-[#bbb] focus:outline-none focus:border-primary transition-colors" />
                       </div>
@@ -382,7 +382,7 @@ export default function DevisFormMulti() {
                       </label>
                       <div className="relative">
                         <Mail size={15} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#aaa]" />
-                        <input type="email" placeholder="jean@exemple.com" value={form.email}
+                        <input type="email" placeholder="nom@gmail.com" value={form.email}
                           onChange={e => set('email', e.target.value)}
                           className="w-full pl-10 pr-4 py-3 rounded-xl border border-[#ebebeb] text-sm text-black placeholder:text-[#bbb] focus:outline-none focus:border-primary transition-colors" />
                       </div>
@@ -393,7 +393,7 @@ export default function DevisFormMulti() {
                       </label>
                       <div className="relative">
                         <Phone size={15} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#aaa]" />
-                        <input type="tel" placeholder="06 12 34 56 78" value={form.tel}
+                        <input type="tel" placeholder="07 82 32 64 51" value={form.tel}
                           onChange={e => set('tel', e.target.value)}
                           className="w-full pl-10 pr-4 py-3 rounded-xl border border-[#ebebeb] text-sm text-black placeholder:text-[#bbb] focus:outline-none focus:border-primary transition-colors" />
                       </div>
