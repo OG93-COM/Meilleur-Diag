@@ -46,7 +46,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between gap-6">
             {/* Logo */}
             <Link href="/" className="shrink-0">
-                {!scrolled ? <Image src={"/images/logo.png"} width={190} height={100} alt='logo' draggable={false} quality={50}/> : <Image src={"/images/logo.png"} width={140} height={100} alt='logo' draggable={false} quality={50}/>}
+                {!scrolled ? <Image src={"/images/logo.avif"} width={190} height={100} alt='logo' draggable={false} quality={50}/> : <Image src={"/images/logo.avif"} width={140} height={100} alt='logo' draggable={false} quality={50}/>}
                     {/* <Image src={"/images/logo.png"} width={190} height={100} alt='logo'/> */}
             </Link>
 
