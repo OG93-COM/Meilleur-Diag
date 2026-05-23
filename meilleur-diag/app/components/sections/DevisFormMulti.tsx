@@ -191,7 +191,7 @@ export default function DevisFormMulti() {
                         Étape {sub + 1} / 4
                       </p>
                       <h3 className="text-2xl font-bold text-white mb-3 leading-snug" style={{ fontFamily: 'Syne, system-ui' }}>
-                        {sidebar.title}ddd
+                        {sidebar.title}
                       </h3>
                       <p className="text-white/60 text-sm leading-relaxed">
                         {sidebar.body}
