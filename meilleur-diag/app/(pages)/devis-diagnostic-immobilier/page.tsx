@@ -1,6 +1,5 @@
 import CTAYellow from '@/app/components/CTAYellow'
 import PageHeader from '@/app/components/PageHeader'
-import DevisForm from '@/app/components/sections/DevisForm'
 import DevisFormMulti from '@/app/components/sections/DevisFormMulti'
 
 export default function DevisPage() {

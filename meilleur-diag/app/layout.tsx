@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   // Titre avec template pour les pages enfants
   title: {
     default: 'Diagnostic Immobilier Paris | Meilleur Diag',
-    template: '%s | Meilleur Diag',
+    template: '%s',
   },
 
   description:

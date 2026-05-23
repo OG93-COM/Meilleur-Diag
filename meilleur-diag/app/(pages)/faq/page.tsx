@@ -97,12 +97,12 @@ export const faqData: FaqCategory[] = [
       {
         question: 'Combien coûte un diagnostic immobilier à Paris ?',
         answer: 'Le prix d\'un diagnostic varie selon le type de diagnostic, la surface du bien et sa localisation. En moyenne, comptez entre 80 € et 150 € pour un DPE seul, 100 € à 180 € pour un diagnostic amiante, et 150 € à 300 € pour un diagnostic électricité ou gaz. Le pack vente complet (tous diagnostics en une intervention) revient souvent moins cher qu\'en commandant chaque diagnostic séparément. Demandez un devis gratuit pour une estimation précise selon votre bien.',
-        links: [{ label: 'Devis gratuit en ligne', href: '/devis' }],
+        links: [{ label: 'Devis gratuit en ligne', href: '/devis-diagnostic-immobilier' }],
       },
       {
         question: 'Est-ce que le devis est vraiment gratuit et sans engagement ?',
         answer: 'Oui, totalement. Notre formulaire de devis en ligne est gratuit et sans engagement. Vous remplissez les informations sur votre bien (type, surface, année de construction), et nous vous répondons avec un prix ferme, sans surprise. Vous n\'êtes pas obligé de confirmer la commande. Aucune carte bancaire n\'est demandée pour obtenir le devis.',
-        links: [{ label: 'Demander un devis', href: '/devis' }],
+        links: [{ label: 'Demander un devis', href: '/devis-diagnostic-immobilier' }],
       },
       {
         question: 'Y a-t-il des frais de déplacement supplémentaires ?',
@@ -264,7 +264,7 @@ export default function FaqPage() {
                     Notre équipe répond à toutes vos questions — 7j/7, par téléphone ou email. Nous vous rappelons aussi gratuitement si vous le souhaitez.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
-                    <Link href="/devis" className="btn-primary px-5 py-3 rounded-xl text-sm">
+                    <Link href="/devis-diagnostic-immobilier" className="btn-primary px-5 py-3 rounded-xl text-sm">
                       Demander un devis <ArrowRight size={15} />
                     </Link>
                     <a href="tel:+33782326451" className="inline-flex items-center gap-2 border border-white/15 text-white font-semibold px-5 py-3 rounded-xl text-sm hover:bg-white/5 transition-colors">
@@ -302,7 +302,7 @@ export default function FaqPage() {
                   <a href="tel:+33782326451" className="flex items-center justify-center gap-2 w-full btn-primary rounded-xl py-3 text-sm mb-2">
                     <Phone size={14} /> 07 82 32 64 51
                   </a>
-                  <Link href="/devis" className="flex items-center justify-center gap-2 w-full border border-white/10 text-white/70 hover:text-white text-sm font-medium py-3 rounded-xl hover:bg-white/5 transition-colors">
+                  <Link href="/devis-diagnostic-immobilier" className="flex items-center justify-center gap-2 w-full border border-white/10 text-white/70 hover:text-white text-sm font-medium py-3 rounded-xl hover:bg-white/5 transition-colors">
                     Devis en ligne <ArrowRight size={13} />
                   </Link>
                 </div>

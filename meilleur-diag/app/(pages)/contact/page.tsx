@@ -179,7 +179,7 @@ export default function ContactPage() {
                     Renseignez votre bien en 2 minutes et recevez votre devis dans l'heure.
                   </p>
                   <Link
-                    href="/devis"
+                    href="/devis-diagnostic-immobilier"
                     className="btn-primary w-full justify-center rounded-xl py-3 text-sm mb-3"
                   >
                     Devis gratuit en ligne

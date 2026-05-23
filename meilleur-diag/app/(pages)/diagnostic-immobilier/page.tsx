@@ -208,7 +208,7 @@ export default function DiagnosticImmobilierPage() {
                   ))}
                 </div>
                 <div className="flex flex-wrap gap-3">
-                  <Link href="/devis" className="btn-primary px-6 py-3 rounded-xl">
+                  <Link href="/devis-diagnostic-immobilier" className="btn-primary px-6 py-3 rounded-xl">
                     Devis gratuit <ArrowRight size={16} />
                   </Link>
                   <a href="tel:+33782326451" className="inline-flex items-center gap-2 border-2 border-[#ebebeb] text-black font-semibold px-6 py-3 rounded-xl hover:border-primary transition-colors text-sm">
@@ -345,7 +345,7 @@ export default function DiagnosticImmobilierPage() {
               Devis gratuit en 2 minutes. Intervention partout en Île-de-France et Paris. Rapport certifié en moins de 24h.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Link href="/devis" className="btn-primary px-7 py-4 rounded-xl text-base shadow-lg shadow-primary/20">
+              <Link href="/devis-diagnostic-immobilier" className="btn-primary px-7 py-4 rounded-xl text-base shadow-lg shadow-primary/20">
                 Demander un devis gratuit <ArrowRight size={17} />
               </Link>
               <a href="tel:+33782326451" className="inline-flex items-center gap-2 justify-center font-semibold px-7 py-4 rounded-xl border border-white/15 text-white hover:bg-white/5 transition-all text-base">

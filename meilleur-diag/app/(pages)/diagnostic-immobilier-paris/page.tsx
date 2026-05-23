@@ -5,7 +5,7 @@ import { ArrowRight, Phone, Award, MapPin, Clock, Shield, FileCheck, Star, Users
 import PageHeader from '@/app/components/PageHeader'
 
 export const metadata: Metadata = {
-  title: 'À Propos — Qui est Meilleur Diag ? | Diagnostic Immobilier Paris',
+  title: 'À Propos | Diagnostic Immobilier Paris',
   description:
     'Meilleur Diag, société de diagnostic immobilier à Paris fondée par M. Mohamed Amine Kalai. Diagnostiqueurs certifiés, expertise reconnue, intervention 7j/7 en Île-de-France.',
   keywords:
@@ -139,7 +139,7 @@ export default function AProposPage() {
                 </p>
 
                 <div className="flex flex-wrap gap-3">
-                  <Link href="/devis" className="btn-primary px-6 py-3 rounded-xl">
+                  <Link href="/devis-diagnostic-immobilier" className="btn-primary px-6 py-3 rounded-xl">
                     Demander un devis
                     <ArrowRight size={16} />
                   </Link>
@@ -311,7 +311,7 @@ export default function AProposPage() {
               <p className="text-white/40 text-sm">Client Meilleur Diag — Paris 11e</p>
 
               <div className="flex flex-col sm:flex-row gap-3 justify-center mt-10">
-                <Link href="/devis" className="btn-primary px-7 py-4 rounded-xl text-base shadow-lg shadow-primary/20">
+                <Link href="/devis-diagnostic-immobilier" className="btn-primary px-7 py-4 rounded-xl text-base shadow-lg shadow-primary/20">
                   Demander un devis gratuit
                   <ArrowRight size={17} />
                 </Link>

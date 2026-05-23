@@ -90,7 +90,7 @@ export default async function VillePage({ params }: Props) {
                   <p key={i} className="text-mygray text-base leading-relaxed mb-4">{p}</p>
                 ))}
                 <div className="flex flex-wrap gap-3 mt-6">
-                  <Link href="/devis" className="btn-primary px-6 py-3 rounded-xl">
+                  <Link href="/devis-diagnostic-immobilier" className="btn-primary px-6 py-3 rounded-xl">
                     Devis gratuit <ArrowRight size={16} />
                   </Link>
                   <a href="tel:+33782326451" className="inline-flex items-center gap-2 border-2 border-[#ebebeb] text-black font-semibold px-6 py-3 rounded-xl hover:border-primary transition-colors text-sm">
@@ -219,7 +219,7 @@ export default async function VillePage({ params }: Props) {
                 <p className="text-white/50 text-sm">Intervention 7j/7 — Rapport en 24h — Devis gratuit</p>
               </div>
               <div className="flex gap-3 shrink-0">
-                <Link href="/devis" className="btn-primary px-5 py-3 rounded-xl text-sm">
+                <Link href="/devis-diagnostic-immobilier" className="btn-primary px-5 py-3 rounded-xl text-sm">
                   Devis gratuit <ArrowRight size={15} />
                 </Link>
                 <a href="tel:+33782326451" className="inline-flex items-center gap-2 border border-white/15 text-white font-semibold px-5 py-3 rounded-xl text-sm hover:bg-white/5 transition-colors">
