@@ -13,18 +13,6 @@ export default function robots(): MetadataRoute.Robots {
           '/admin/',
         ],
       },
-      {
-        // Bloquer les bots IA qui scrapent le contenu
-        userAgent: [
-          'GPTBot',
-          'ChatGPT-User',
-          'CCBot',
-          'anthropic-ai',
-          'Claude-Web',
-          'Google-Extended',
-        ],
-        disallow: '/',
-      },
     ],
     sitemap: 'https://meilleur-diag.com/sitemap.xml',
     host: 'https://meilleur-diag.com',

@@ -6,7 +6,7 @@ export default function DevisPage() {
   return (
     <>
         <PageHeader
-            title="Devis Diagnostic Immobilier à Paris"
+            title="Devis Diagnostic Immobilier à Paris | Meilleur Diag"
             subtitle="Obtenez rapidement votre devis pour tous vos diagnostics immobiliers : DPE, amiante, plomb, gaz, électricité et termites. Intervention rapide et diagnostiqueurs certifiés."
             crumbs={[
                 { label: 'Accueil', href: '/' },

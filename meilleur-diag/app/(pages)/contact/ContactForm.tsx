@@ -186,7 +186,7 @@ export default function ContactForm() {
             <User size={15} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#bbb] pointer-events-none" />
             <input
               type="text"
-              placeholder="Jean Dupont"
+              placeholder="Nom et Prenom"
               value={form.nom}
               onChange={e => set('nom', e.target.value)}
               onBlur={() => handleBlur('nom')}
@@ -206,7 +206,7 @@ export default function ContactForm() {
             <Mail size={15} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#bbb] pointer-events-none" />
             <input
               type="email"
-              placeholder="jean.dupont@gmail.com"
+              placeholder="nom.prenom@gmail.com"
               value={form.email}
               onChange={e => set('email', e.target.value)}
               onBlur={() => handleBlur('email')}
